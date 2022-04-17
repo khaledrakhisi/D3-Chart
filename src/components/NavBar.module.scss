@@ -1,0 +1,69 @@
+.navBar{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    
+    color: #fff;
+
+    .userinfo{
+        display: flex;
+        justify-content: center;
+        align-items: center;       
+
+        font-style: italic;
+
+        margin-left: 18px;
+
+        span{
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        .logout{
+            display: flex;
+            @media (max-width: 768px) {
+                display: none;
+          }  
+        }
+    }
+
+    .divider{
+        margin-left: 12px;
+        border-left: 1px solid #fff;
+        width: 1px;
+        height: 20px;
+    }
+
+    .menuitem{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 8px;
+
+        .icon{
+            margin: 0 8px;
+            fill:#fff;
+        }        
+        &:hover, &:hover .icon{
+            color: #EF233C;
+            fill: #EF233C;
+        }        
+    }
+
+    .menu{
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 768px) {
+              display: none;
+        }  
+    }
+
+    .hamburger{
+        margin-left: auto;
+    }
+}

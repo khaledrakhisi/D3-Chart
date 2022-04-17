@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+.main-navigation__menu-btn {
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* the middle one */
+.main-navigation__menu-btn span.second {
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 2px;
+  background-color: var(--primaryColor);;
+  transition: all .5s ease-in-out;
+}
+.main-navigation__menu-btn span.first,
+.main-navigation__menu-btn span.third{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primaryColor);;
+  transition: all .3s ease-in-out;
+}
+
+/* ANIMATION */
+.main-navigation__menu-btn.open span.second {
+  transform: translateX(10px);
+  background: transparent;
+  box-shadow: none;
+}
+.main-navigation__menu-btn.open span.first {
+  transform: rotate(45deg);
+    transform-origin: 5%;
+    /* width: 41px */
+}
+.main-navigation__menu-btn.open span.third {
+  transform: rotate(-45deg);
+    transform-origin: 5%;
+}
+
+.main-navigation__header-nav {
+  display: none;
+}
+
+.main-navigation__drawer-nav {
+  height: 100%;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .main-navigation__menu-btn {
+    display: none;
+  }
+}

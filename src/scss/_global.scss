@@ -1,12 +1,12 @@
 @use "./abstracts/" as *;
-@import url(../assets/fonts/css/fontiran.css);
+// @import url(../assets/fonts/css/fontiran.css);
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
 
 html {
   /* ****Colors**** */
-  --primaryColor: #ee384e;
-  --secondaryColor: #3c4b6d;
+  --primaryColor: #EF233C;
+  --secondaryColor: #222222;
   //light theme
   --bgc: #f2f2f2;
   --card-bgc: #f9f9fa;
@@ -110,7 +110,7 @@ body {
   line-height: 1.5em;
   overflow-x: hidden;
   @include tablet {
-    background-color: var(--secondaryColor);
+    // background-color: var(--secondaryColor);
   }
 }
 
