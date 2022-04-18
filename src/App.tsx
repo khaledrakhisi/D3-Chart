@@ -8,11 +8,11 @@ import "./scss/App.scss";
 
 function App() {
   return (
-    <div className="App">
+    <section className="App">
       <Header />
       <HomePage />
       <Footer />
-    </div>
+    </section>
   );
 }
 

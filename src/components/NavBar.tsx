@@ -19,14 +19,14 @@ const NavBar: React.FunctionComponent = () => {
       </NavLink>
       <NavLink className={classes.userinfo} to="/">
         Hallo,&nbsp;<span>{"LIQID!"}</span>
-        <div className={classes.logout}>
+        <section className={classes.logout}>
           <div className={classes.divider} />
           <NavLink className={classes.menuitem} to="/">
             <ExitIcon className={classes.icon} /> Logout
           </NavLink>
-        </div>
+        </section>
       </NavLink>
-      <div className={classes.menu}>
+      <menu>
         <NavLink className={classes.menuitem} to="/">
           <HomeIcon className={classes.icon} /> Home
         </NavLink>
@@ -36,9 +36,9 @@ const NavBar: React.FunctionComponent = () => {
         <NavLink className={classes.menuitem} to="/">
           <SettingsIcon className={classes.icon} /> Settings
         </NavLink>
-        <div className={classes.hamburger}>
-          <HamburgerIcon />
-        </div>
+      </menu>
+      <div className={classes.hamburger}>
+        <HamburgerIcon />
       </div>
     </nav>
   );

@@ -1,11 +1,11 @@
 import React from "react";
 
-import "./Button.module.scss";
+import classes from "./Button.module.scss";
 
 interface IButtonProps {
   children: React.ReactNode;
 }
 
 export const Button: React.FunctionComponent<IButtonProps> = ({ children }) => {
-  return <button>{children}</button>;
+  return <button className={classes.custombutton}>{children}</button>;
 };

@@ -28,11 +28,13 @@ const slides: Array<TCarouselSlide> = [
 
 const HomePage: React.FunctionComponent = () => {
   return (
-    <div className={classes.container}>
+    <main className={classes.container}>
       <section className={classes.top}>
-        <section className={classes.info}>
-          <Carousel slides={slides} />
-        </section>
+        <aside className={classes.info}>
+          <div className={classes.carousel}>
+            <Carousel slides={slides} />
+          </div>
+        </aside>
         <section className={classes.actions}>
           <div className={classes.action1}>
             <Carousel
@@ -80,7 +82,7 @@ const HomePage: React.FunctionComponent = () => {
           ]}
         />
       </section>
-    </div>
+    </main>
   );
 };
 

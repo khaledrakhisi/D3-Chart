@@ -22,9 +22,10 @@
         }
 
         .logout{
-            display: flex;
-            @media (max-width: 768px) {
-                display: none;
+            
+            display: none;
+            @media (min-width: 768px) {
+                display: flex;    
           }  
         }
     }
@@ -52,18 +53,22 @@
         }        
     }
 
-    .menu{
-        margin-left: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    menu{
+        display: none;
 
-        @media (max-width: 768px) {
-              display: none;
+        @media (min-width: 768px) {
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }  
     }
 
     .hamburger{
         margin-left: auto;
+
+        @media (min-width: 768px) {
+            display: none;
+        }
     }
 }

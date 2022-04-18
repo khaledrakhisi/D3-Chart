@@ -16,7 +16,7 @@ export const Carousel: React.FunctionComponent<ICarouselProps> = ({
   return (
     <div className={classes.carousel}>
       <React.Fragment>
-        <div>{slides[0].caption}</div>
+        <blockquote>{slides[0].caption}</blockquote>
         <section>{slides[0].content}</section>
       </React.Fragment>
     </div>
