@@ -2,11 +2,20 @@ import React, { useState } from "react";
 
 import "./HamburgerIcon.css";
 
-export const HamburgerIcon = () => {
+interface IHamburgerMenuProps {
+  onClick: (isExpanded: boolean) => void;
+}
+
+export const HamburgerMenu: React.FunctionComponent<IHamburgerMenuProps> = ({
+  onClick,
+}) => {
   const [isContextMenuExpanded, setIsContextMenuExpanded] =
     useState<boolean>(false);
-  const contextMenuButtonClickHandle = () => {
+  const contextMenuButtonClickHandle = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
     setIsContextMenuExpanded(!isContextMenuExpanded);
+    onClick(!isContextMenuExpanded);
   };
 
   return (
@@ -15,7 +24,7 @@ export const HamburgerIcon = () => {
         className={`main-navigation__menu-btn ${
           isContextMenuExpanded && "open"
         }`}
-        onClick={contextMenuButtonClickHandle}
+        onClick={(e) => contextMenuButtonClickHandle(e)}
       >
         <span className="first" />
         <span className="second" />

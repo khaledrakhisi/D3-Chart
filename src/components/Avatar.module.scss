@@ -1,12 +1,27 @@
 .avatar{
+    position: relative;
+
     width: 53px;
     height: 53px;
     /* UI Properties */
     background: #EF233C 0% 0% no-repeat padding-box;
-    opacity: 1;
     border-radius: 100%;
     
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 4;
+
+    .icon{
+        z-index: 4;
+
+        &.inversed{
+            fill: #EF233C;
+        }
+    }
+
+    &.inversed{
+        background: #222222 0% 0% no-repeat padding-box;        
+    }
 }

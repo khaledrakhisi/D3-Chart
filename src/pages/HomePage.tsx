@@ -26,7 +26,7 @@ const slides: Array<TCarouselSlide> = [
   },
 ];
 
-const HomePage: React.FunctionComponent = () => {
+const HomePage = () => {
   return (
     <main className={classes.container}>
       <section className={classes.top}>

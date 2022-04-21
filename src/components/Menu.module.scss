@@ -1,0 +1,19 @@
+menu{
+    display: none;
+
+    @media (min-width: 768px) {
+        margin-left: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.icon{
+    margin: 0 8px;
+    fill:#fff;
+}        
+&:hover, &:hover .icon{
+    color: #EF233C;
+    fill: #EF233C;
+}        

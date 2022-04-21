@@ -1,0 +1,11 @@
+.brand{
+    margin: 30px;
+    .icon{
+        z-index: 4;
+        fill:#EF233C;
+        
+        &.inversed{
+            fill: #fff;
+        }
+    }
+}

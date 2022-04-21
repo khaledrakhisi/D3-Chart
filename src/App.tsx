@@ -8,7 +8,7 @@ import "./scss/App.scss";
 
 function App() {
   return (
-    <section className="App">
+    <section className="app">
       <Header />
       <HomePage />
       <Footer />

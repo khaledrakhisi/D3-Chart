@@ -103,6 +103,10 @@ input[type=file]::-webkit-file-upload-button {
 
 //general styles
 body {
+  /* Add some padding on document's body to prevent the content
+    to go underneath the header */
+  padding-top: 90px; 
+
   background-color: var(--bgc);
   color: var(--text-color);
   font-family: var(--fontFamily);
@@ -270,7 +274,8 @@ html[dir="rtl"] {
 //---------- scrollbar styles
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  // width: 0.5rem;
+  display: none;
 }
 
 ::-webkit-scrollbar-track {
