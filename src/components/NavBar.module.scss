@@ -1,12 +1,11 @@
-.navBar{
+.navBar {
     display: flex;
-    align-items: center;
-
-    width: 100%;
+    // flex-direction: column;
+    // align-items: flex-start;
     
     color: #fff;
 
-    .userinfo{
+    .userinfo {
         display: flex;
         justify-content: center;
         align-items: center;       
@@ -17,6 +16,9 @@
         z-index: 3;
 
         span{
+            margin-left: 18px;
+        }
+        .link{            
             &:hover{
                 text-decoration: underline;
             }
@@ -25,6 +27,7 @@
 
     .divider{
         display: none;
+
         @media (min-width: 768px) {
             display: block;
             margin-left: 12px;
@@ -34,44 +37,60 @@
         }
     }
 
-    menu{
+    .topmenu{
         display: none;
-        width: 100%;
         
         @media (min-width: 768px) {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        } 
-        
-        .menuitem{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-    
-            margin: 0 8px;
-
-            
-    
-            .icon{
-                margin: 0 8px;
-                fill:#fff;
-            }        
-            &:hover, &:hover .icon{
-                color: #EF233C;
-                fill: #EF233C;
-            }        
-        }
-        .logout{
-                margin-right: auto;
+            display: block;
+            width: 100%;            
         }
     }
 
-    .hamburger{
-        margin-left: auto;
+    // menu {
+    //     display: none;
+    //     width: 100%;
+        
+    //     .menuitem {
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    
+    //         margin: 0 8px;
 
-        @media (min-width: 768px) {
-            display: none;
-        }
+    //         .icon {
+    //             margin: 0 8px;
+    //             fill:#fff;
+    //         }        
+    //         &:hover, &:hover .icon {
+    //             color: #EF233C;
+    //             fill: #EF233C;
+    //         }        
+    //     }
+    //     .logout{
+    //             margin-right: auto;
+    //     }
+
+    //     @media (min-width: 768px) {
+    //         display: flex;
+    //         justify-content: flex-end;
+    //         align-items: center;
+    //     } 
+    // }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+
+        width: 100%;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    @media (min-width: 768px) {
+        display: none;
     }
 }

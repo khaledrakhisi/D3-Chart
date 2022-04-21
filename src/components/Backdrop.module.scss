@@ -12,10 +12,13 @@
     // z-index: 1;
 
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
-    h1{
-        font-weight: 400;
+    padding-top: 142px;
+
+    .brand{
+        margin-top: auto;
     }
 }

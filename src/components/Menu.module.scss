@@ -1,19 +1,33 @@
-menu{
-    display: none;
+menu {
 
-    @media (min-width: 768px) {
-        margin-left: auto;
+    // width: 100%;
+    
+    .menuitem {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
-}
 
-.icon{
-    margin: 0 8px;
-    fill:#fff;
-}        
-&:hover, &:hover .icon{
-    color: #EF233C;
-    fill: #EF233C;
-}        
+        margin: 30px 8px;
+
+        .icon {
+            margin: 0 8px;
+            fill:#fff;
+        }        
+        &:hover, &:hover .icon {
+            color: #EF233C;
+            fill: #EF233C;
+            &.inverse{
+                fill: #fff;
+            }
+        }        
+    }
+    .logout{
+        margin-right: auto;
+    }
+
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    } 
+}
