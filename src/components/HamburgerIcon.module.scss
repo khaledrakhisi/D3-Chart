@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+.hamburgericon {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  background: transparent;
+
+  border: none;
+
+  cursor: pointer;
+
+  z-index: 3;
+
+  .first, .second, .third{
+    display: block;
+    position: relative;
+    height: 2px;
+    background-color: var(--primaryColor);;
+  }
+
+  .first,
+  .third{
+    width: 100%;
+    transition: all .3s ease-in-out;
+
+    &.open{
+      transform-origin: 5%;
+      background-color: #fff;
+    }
+  }
+
+  .first{
+    &.open{
+      transform: rotate(45deg);
+    }
+  }
+  .second {
+    width: 90%;
+    transition: all .5s ease-in-out;
+
+    &.open{
+      transform: translateX(10px);
+      background: transparent;
+      box-shadow: none;
+    }
+  }
+  .third{
+    &.open{
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* ANIMATION */
+// .main-navigation__menu-btn.open span.second {
+  
+// }
+// .main-navigation__menu-btn.open span.first {
+  
+//     /* width: 41px */
+// }
+// .main-navigation__menu-btn.open span.third {
+  
+// }
+
+// .main-navigation__header-nav {
+//   display: none;
+// }
+
+// .main-navigation__drawer-nav {
+//   height: 100%;
+//   color: #ffffff;
+// }
+
+/* @media (min-width: 768px) {
+  .main-navigation__menu-btn {
+    display: none;
+  }
+} */

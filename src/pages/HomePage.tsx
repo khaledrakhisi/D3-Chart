@@ -2,6 +2,8 @@ import React from "react";
 
 import { Button } from "../components/Button";
 import { Carousel, TCarouselSlide } from "../components/Carousel";
+import { ChartBar } from "../components/ChartBar";
+import { IUserData } from "../interfaces/IUserData";
 
 import classes from "./HomePage.module.scss";
 
@@ -24,6 +26,14 @@ const slides: Array<TCarouselSlide> = [
     caption: "title 2",
     content: "content 2",
   },
+];
+
+const DATA: IUserData[] = [
+  { label: "LIQID Cash", value: 920 },
+  { label: "LIQID Real Estate", value: 630 },
+  { label: "LIQID Wealth", value: 850 },
+  { label: "LIQID Private Equity", value: 220 },
+  { label: "LIQID Venture", value: 510 },
 ];
 
 const HomePage = () => {
@@ -72,15 +82,21 @@ const HomePage = () => {
           </div>
         </section>
       </section>
-      <section className={classes.chart}>
-        <Carousel
-          slides={[
-            {
-              caption: <h1>Your products</h1>,
-              content: "",
-            },
-          ]}
-        />
+      <section className={classes.data}>
+        <div className={classes.chart}>
+          <Carousel
+            slides={[
+              {
+                caption: (
+                  <div className={classes.pt}>
+                    <h1>Your products</h1>
+                  </div>
+                ),
+                content: <ChartBar data={DATA} axisYMax={1000} />,
+              },
+            ]}
+          />
+        </div>
       </section>
     </main>
   );

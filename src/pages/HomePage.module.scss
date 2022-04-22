@@ -52,7 +52,7 @@
                 color: #EF233C;
                 // repeat
                 border-left: 1px solid #EF233C;
-            }
+              }
               article{
                 color: #222222;
 
@@ -79,7 +79,7 @@
                 color: #EF233C;
                 // repeat
                 border-left: 1px solid #EF233C;
-            }
+              }
               article{
                 color: #222222;
                 overflow: hidden;
@@ -118,13 +118,32 @@
     }
 
 
-  .chart {    
+  .data {    
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: #f0f0f3;
-    h1{
-      color: #EF233C;
-      // repeat
-      border-left: 1px solid #EF233C;
+
+    padding-top: 24px;
+    
+    .chart{
+      // width: 810px;
+      .pt{
+        display: flex;
+        justify-content: center;
+        h1{
+          color: #EF233C;
+          // repeat
+          border-left: 1px solid #EF233C;
+        }
+      }      
+      section{
+        color: #222222;
+      }
+    }
   }
-  }
+
 }

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./HamburgerIcon.css";
+import classes from "./HamburgerIcon.module.scss";
 
 interface IHamburgerMenuProps {
   onClick: (isExpanded: boolean) => void;
@@ -11,9 +11,7 @@ export const HamburgerMenu: React.FunctionComponent<IHamburgerMenuProps> = ({
 }) => {
   const [isContextMenuExpanded, setIsContextMenuExpanded] =
     useState<boolean>(false);
-  const contextMenuButtonClickHandle = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
+  const contextMenuButtonClickHandle = (e: React.MouseEvent) => {
     setIsContextMenuExpanded(!isContextMenuExpanded);
     onClick(!isContextMenuExpanded);
   };
@@ -21,14 +19,26 @@ export const HamburgerMenu: React.FunctionComponent<IHamburgerMenuProps> = ({
   return (
     <>
       <button
-        className={`main-navigation__menu-btn ${
-          isContextMenuExpanded && "open"
+        className={`${classes.hamburgericon} ${
+          isContextMenuExpanded && classes.open
         }`}
         onClick={(e) => contextMenuButtonClickHandle(e)}
       >
-        <span className="first" />
-        <span className="second" />
-        <span className="third" />
+        <span
+          className={`${classes.first} ${
+            isContextMenuExpanded && classes.open
+          }`}
+        />
+        <span
+          className={`${classes.second} ${
+            isContextMenuExpanded && classes.open
+          }`}
+        />
+        <span
+          className={`${classes.third} ${
+            isContextMenuExpanded && classes.open
+          }`}
+        />
       </button>
     </>
   );
