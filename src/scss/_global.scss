@@ -10,7 +10,7 @@ html {
   //light theme
   --bgc: #f2f2f2;
   --card-bgc: #f9f9fa;
-  --text-color: #424750;
+  --text-color: #fff;
   //light theme status
   --approved-bgc: rgba(86, 240, 0, 0.3);
   --approved-textColor: #246500;
@@ -20,7 +20,7 @@ html {
   --rejected-textColor: #9d0e0e;
 
   /* ****Font family**** */
-  --fontFamily: "Poppins", "Roboto", sans-serif;
+  --fontFamily: Roboto;
 }
 html[theme="dark"] {
   //dark theme
@@ -35,10 +35,6 @@ html[theme="dark"] {
   --pending-textColor: #a5e9ff;
   --rejected-bgc: rgba(255, 56, 56, 0.3);
   --rejected-textColor: #f2bebe;
-}
-
-html[dir="rtl"] {
-  --fontFamily: iranyekan, "IRANSans", "Tahoma";
 }
 
 //reset
@@ -66,6 +62,7 @@ a {
 }
 
 input,
+button,
 select {
   font-family: inherit;
   color: inherit;
@@ -118,54 +115,54 @@ body {
   }
 }
 
-.title {
-  font-size: $fontSizeHeadlineSmall;
-  font-weight: 700;
-  line-height: 2em;
-  margin-bottom: 2rem;
-}
+// .title {
+//   font-size: $fontSizeHeadlineSmall;
+//   font-weight: 700;
+//   line-height: 2em;
+//   margin-bottom: 2rem;
+// }
 
-.subTitle {
-  font-size: 18px;
-  margin-bottom: 1rem;
-}
+// .subTitle {
+//   font-size: 18px;
+//   margin-bottom: 1rem;
+// }
 
-.status {
-  display: inline-block;
-  padding: 2px 10px;
-  text-align: center;
-  font-size: 10px;
-  border-radius: $largeBorderRadius;
-}
-.approved {
-  background-color: var(--approved-bgc);
-  color: var(--approved-textColor);
-}
+// .status {
+//   display: inline-block;
+//   padding: 2px 10px;
+//   text-align: center;
+//   font-size: 10px;
+//   border-radius: $largeBorderRadius;
+// }
+// .approved {
+//   background-color: var(--approved-bgc);
+//   color: var(--approved-textColor);
+// }
 
-.pending {
-  background-color: var(--pending-bgc);
-  color: var(--pending-textColor);
-}
+// .pending {
+//   background-color: var(--pending-bgc);
+//   color: var(--pending-textColor);
+// }
 
-.rejected {
-  background-color: var(--rejected-bgc);
-  color: var(--rejected-textColor);
-}
+// .rejected {
+//   background-color: var(--rejected-bgc);
+//   color: var(--rejected-textColor);
+// }
 
-.ltr {
-  direction: ltr;
-  text-align: left;
-}
+// .ltr {
+//   direction: ltr;
+//   text-align: left;
+// }
 
-.rtl {
-  font-family: iranyekan, "IRANSans", "Tahoma";
-  direction: rtl;
-  text-align: right;
-}
+// .rtl {
+//   font-family: iranyekan, "IRANSans", "Tahoma";
+//   direction: rtl;
+//   text-align: right;
+// }
 
-.error {
-  color: var(--rejected-textColor);
-}
+// .error {
+//   color: var(--rejected-textColor);
+// }
 
 @include tablet {
   .topNav_left_menu_open {

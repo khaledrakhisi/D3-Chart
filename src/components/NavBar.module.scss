@@ -1,7 +1,5 @@
 .navBar {
     display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
     
     color: #fff;
 
@@ -12,7 +10,6 @@
 
         font-style: italic;
 
-        margin-left: 18px;
         z-index: 3;
 
         span{
@@ -45,37 +42,6 @@
             width: 100%;            
         }
     }
-
-    // menu {
-    //     display: none;
-    //     width: 100%;
-        
-    //     .menuitem {
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    
-    //         margin: 0 8px;
-
-    //         .icon {
-    //             margin: 0 8px;
-    //             fill:#fff;
-    //         }        
-    //         &:hover, &:hover .icon {
-    //             color: #EF233C;
-    //             fill: #EF233C;
-    //         }        
-    //     }
-    //     .logout{
-    //             margin-right: auto;
-    //     }
-
-    //     @media (min-width: 768px) {
-    //         display: flex;
-    //         justify-content: flex-end;
-    //         align-items: center;
-    //     } 
-    // }
 
     @media (min-width: 768px) {
         flex-direction: row;

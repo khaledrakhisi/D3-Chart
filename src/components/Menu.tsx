@@ -8,18 +8,25 @@ import { ReactComponent as UserIcon } from "../assets/images/user.svg";
 import classes from "./Menu.module.scss";
 
 export const Menu = () => {
+  const logoutButtonHandle = () => {
+    // todo: logout actions
+  };
   return (
     <menu>
-      <NavLink className={`${classes.menuitem} ${classes.logout}`} to="/">
+      <NavLink
+        className={`${classes.menuitem} ${classes.logout}`}
+        onClick={logoutButtonHandle}
+        to="/"
+      >
         <ExitIcon className={classes.icon} /> Logout
       </NavLink>
       <NavLink className={classes.menuitem} to="/">
         <HomeIcon className={classes.icon} /> Home
       </NavLink>
-      <NavLink className={classes.menuitem} to="/">
+      <NavLink className={classes.menuitem} to="/profile">
         <UserIcon className={classes.icon} /> Profile
       </NavLink>
-      <NavLink className={classes.menuitem} to="/">
+      <NavLink className={classes.menuitem} to="/settings">
         <SettingsIcon className={classes.icon} /> Settings
       </NavLink>
     </menu>
