@@ -21,7 +21,7 @@ export const Menu = () => {
     <menu>
       {loggedinUser && (
         <NavLink
-          className={`${classes.menuitem} ${classes.logout}`}
+          className={`${classes.menuitem}`}
           onClick={logoutButtonHandle}
           to="/login"
         >

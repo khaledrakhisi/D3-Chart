@@ -1,4 +1,21 @@
-/* ****Fonts**** */
+ /* Color Palette */
+ $primaryColor: #EF233C;
+ $secondaryColor: #222222;
+ //light theme
+ $bgc: #f2f2f2;
+ $card-bgc: #f9f9fa;
+ $text-color: #fff;
+ //light theme status
+ $approved-bgc: rgba(86, 240, 0, 0.3);
+ $approved-textColor: #246500;
+ $pending-bgc: rgba(45, 204, 255, 0.3);
+ $pending-textColor: #086785;
+ $rejected-bgc: rgba(255, 56, 56, 0.3);
+ $rejected-textColor: #9d0e0e;
+
+ /* ****Font family**** */
+ $fontFamily: "Roboto", sans-serif;
+
 
 //Body size
 $fontSizeBodySmall: 12px; //line-height:16px; letter-spacing:0.4%;

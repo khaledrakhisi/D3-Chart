@@ -1,16 +1,16 @@
-.avatar{
-    position: relative;
+@use "../scss/abstracts/" as *;
 
+.avatar{
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flex();
+    overflow: hidden;
+    position: relative;
     width: 53px;
     height: 53px;
-    /* UI Properties */
     background: #EF233C 0% 0% no-repeat padding-box;
     border-radius: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     z-index: 4;
 
     .icon{

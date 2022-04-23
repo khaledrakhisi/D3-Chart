@@ -1,12 +1,11 @@
+@use "../scss/abstracts/" as *;
+
 menu {
-
-    // width: 100%;
-    
     .menuitem {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        @include flex();
         margin: 30px 8px;
 
         .icon {
@@ -21,13 +20,15 @@ menu {
             }
         }        
     }
-    .logout{        
+    & > :first-child{        
         margin-right: auto;        
     }
 
-    @media (min-width: 768px) {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+    // @media (min-width: 768px) {
+    @include tablet {
+        // display: flex;
+        // justify-content: flex-end;
+        // align-items: center;
+        @include flex(row, flex-end, center);
     } 
 }

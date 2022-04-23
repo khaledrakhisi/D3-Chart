@@ -1,6 +1,7 @@
 export interface IUserData {
   label: string;
   value: number;
+  color: string;
 }
 export interface IUser {
   id: number;

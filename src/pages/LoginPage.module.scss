@@ -3,18 +3,14 @@
 .login{   
     @include flex();
     width: 100%;
-
     padding-top: 50px;
     padding-bottom: 50px;
 
     form{        
         @include flex(column);
-
         width: 280px;
         height: 450px;
-
         padding: 24px;
-
         background-color: #fff;
         box-shadow: $mainBoxShadow;
         margin-top: 7.5px;

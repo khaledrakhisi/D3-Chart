@@ -1,19 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@use "../scss/abstracts/" as *;
 
 .hamburgericon {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-around;
+  // align-items: flex-end;
+  @include flex(column, space-around, flex-end);
   width: 25px;
   height: 25px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-end;
   background: transparent;
-
   border: none;
-
   cursor: pointer;
-
   z-index: 3;
 
   .first, .second, .third{

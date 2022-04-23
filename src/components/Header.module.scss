@@ -1,16 +1,13 @@
+@use "../scss/abstracts/" as *;
+
 header{    
+    // display: flex;
+    // align-items: center;
+    @include flex(row, unset, center);
     position: fixed;
     top: 0;
-
     width: 100%;
     height: 90px;
-
-    display: flex;
-    align-items: center;
-
     padding: 12px 24px;
-
     background-color: #222222;
-
-    // z-index: 4;
 }

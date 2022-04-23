@@ -1,15 +1,15 @@
+@use "../scss/abstracts/" as *;
+
 .navBar {
-    display: flex;
-    
+    // display: flex;
     color: #fff;
 
     .userinfo {
-        display: flex;
-        justify-content: center;
-        align-items: center;       
-
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;       
+        @include flex();
         font-style: italic;
-
         z-index: 3;
 
         span{
@@ -24,8 +24,8 @@
 
     .divider{
         display: none;
-
-        @media (min-width: 768px) {
+        // @media (min-width: 768px) {
+        @include tablet {
             display: block;
             margin-left: 12px;
             border-left: 1px solid #fff;
@@ -36,17 +36,18 @@
 
     .topmenu{
         display: none;
-        
-        @media (min-width: 768px) {
+        // @media (min-width: 768px) {
+        @include tablet {
             display: block;
             width: 100%;            
         }
     }
 
-    @media (min-width: 768px) {
-        flex-direction: row;
-        align-items: center;
-
+    // @media (min-width: 768px) {
+    @include tablet {
+        // flex-direction: row;
+        // align-items: center;
+        @include flex();
         width: 100%;
     }
 }
@@ -56,7 +57,8 @@
     top: 30px;
     right: 30px;
 
-    @media (min-width: 768px) {
+    // @media (min-width: 768px) {
+    @include tablet {
         display: none;
     }
 }

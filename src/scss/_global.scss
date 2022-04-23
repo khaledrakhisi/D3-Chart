@@ -1,43 +1,10 @@
 @use "./abstracts/" as *;
-// @import url(../assets/fonts/css/fontiran.css);
+@import url(../assets/fonts/css/roboto.css);
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500&display=swap");
+// html {
+ 
+// }
 
-html {
-  /* ****Colors**** */
-  --primaryColor: #EF233C;
-  --secondaryColor: #222222;
-  //light theme
-  --bgc: #f2f2f2;
-  --card-bgc: #f9f9fa;
-  --text-color: #fff;
-  //light theme status
-  --approved-bgc: rgba(86, 240, 0, 0.3);
-  --approved-textColor: #246500;
-  --pending-bgc: rgba(45, 204, 255, 0.3);
-  --pending-textColor: #086785;
-  --rejected-bgc: rgba(255, 56, 56, 0.3);
-  --rejected-textColor: #9d0e0e;
-
-  /* ****Font family**** */
-  --fontFamily: Roboto;
-}
-html[theme="dark"] {
-  //dark theme
-  --bgc: #283036;
-  --card-bgc: #1e2529;
-  --text-color: #ebebeb;
-
-  //light theme status
-  --approved-bgc: rgba(66, 171, 8, 0.3);
-  --approved-textColor: #d0ffb6;
-  --pending-bgc: rgba(45, 204, 255, 0.3);
-  --pending-textColor: #a5e9ff;
-  --rejected-bgc: rgba(255, 56, 56, 0.3);
-  --rejected-textColor: #f2bebe;
-}
-
-//reset
 *,
 *::before,
 *::after {
@@ -72,46 +39,20 @@ select {
   }
 }
 
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-  // border: 1px solid green;
-  // -webkit-text-fill-color: green;
-  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
-  box-shadow: 0 0 0px 1000px transparent inset;
-  transition: background-color 5000s ease-in-out 0s;
-}
-
-::placeholder {
-  color: #b9b9b9;
-}
-
-input[type=file], /* FF, IE7+, chrome (except button) */
-input[type=file]::-webkit-file-upload-button {
-  /* chromes and blink button */
-  cursor: pointer;
-}
-
 //general styles
 body {
   /* Add some padding on document's body to prevent the content
     to go underneath the header */
   padding-top: 90px; 
 
-  background-color: var(--bgc);
-  color: var(--text-color);
-  font-family: var(--fontFamily);
+  background-color: $bgc;
+  color: $text-color;
+  font-family: $fontFamily;
   font-size: $fontSizeBodyLarge;
   line-height: 1.5em;
   overflow-x: hidden;
   @include tablet {
-    // background-color: var(--secondaryColor);
+    // background-color: var($secondaryColor);
   }
 }
 
@@ -135,18 +76,18 @@ body {
 //   border-radius: $largeBorderRadius;
 // }
 // .approved {
-//   background-color: var(--approved-bgc);
-//   color: var(--approved-textColor);
+//   background-color: var($approved-bgc);
+//   color: var($approved-textColor);
 // }
 
 // .pending {
-//   background-color: var(--pending-bgc);
-//   color: var(--pending-textColor);
+//   background-color: var($pending-bgc);
+//   color: var($pending-textColor);
 // }
 
 // .rejected {
-//   background-color: var(--rejected-bgc);
-//   color: var(--rejected-textColor);
+//   background-color: var($rejected-bgc);
+//   color: var($rejected-textColor);
 // }
 
 // .ltr {
@@ -161,7 +102,7 @@ body {
 // }
 
 // .error {
-//   color: var(--rejected-textColor);
+//   color: var($rejected-textColor);
 // }
 
 @include tablet {
@@ -209,77 +150,18 @@ body {
   // transition: all 0.5s ease-in-out;
 }
 
-//----------- not found Page -----------------
-.notFound__container {
-  font-family: var(--fontFamily);
-  @include flex();
-  flex-direction: column;
-  width: 100%;
-  min-height: 100vh;
-  @include tablet {
-    background-color: var(--bgc);
-  }
-}
 
-.notFound__container_rtl {
-  font-family: iranyekan, "IRANSans", "Tahoma";
-  min-height: 100vh;
-  @include flex();
-  flex-direction: column;
-  @include tablet {
-    background-color: var(--bgc);
-  }
-}
-
-.notFound__title {
-  font-size: 63px;
-  margin: 5rem 0 3rem;
-  font-family: inherit;
-  line-height: 70px;
-  &_rtl {
-    direction: rtl;
-  }
-
-  @include tablet {
-    font-size: 36px;
-    margin: 3rem;
-    line-height: 33px;
-  }
-  @include mobile {
-    font-size: 24px;
-    margin: 1rem;
-  }
-}
-
-.notFound__img {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-//---------- end of not Found page
-
-html[dir="rtl"] {
-  @include tablet {
-    .sidebar__open .main_wrapper {
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      transform: scale(0.9) translateX(-45%);
-    }
-  }
-}
-
-//---------- scrollbar styles
-
+//$-------- scrollbar styles
 ::-webkit-scrollbar {
   // width: 0.5rem;
   display: none;
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var(--bgc);
+  background-color: var($bgc);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--secondaryColor);
+  background-color: var($secondaryColor);
   border-radius: 100vw;
 }

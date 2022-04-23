@@ -54,8 +54,8 @@ interface BarsProps {
 function Bars({ data, width, height, scaleX, scaleY }: BarsProps) {
   return (
     <>
-      {data.map(({ value, label }) => {
-        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+      {data.map(({ value, label, color }) => {
+        // const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
         return (
           <g key={`bar-${label}`}>
@@ -71,7 +71,7 @@ function Bars({ data, width, height, scaleX, scaleY }: BarsProps) {
               // width={scaleX.bandwidth()}
               width={width}
               height={height - scaleY(value)}
-              fill={`#${randomColor}`}
+              fill={color}
             />
           </g>
         );

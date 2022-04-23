@@ -7,14 +7,21 @@
   justify-content: $justifyContent;
 }
 
+@mixin ellipsesOverflow($maxLines: 3){
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $maxLines;
+  -webkit-box-orient: vertical;
+}
+
 @mixin mobile {
-  @media only screen and (max-width: $mobile-width) {
+  @media only screen and (min-width: $mobile-width) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media only screen and (max-width: $tablet-width) {
+  @media only screen and (min-width: $tablet-width) {
     @content;
   }
 }
