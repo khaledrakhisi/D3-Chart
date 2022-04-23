@@ -10,21 +10,21 @@
         @include flex(column);
         width: 280px;
         height: 450px;
-        padding: 24px;
-        background-color: #fff;
+        padding: $largeSpacing;
+        background-color: $text-color;
         box-shadow: $mainBoxShadow;
         margin-top: 7.5px;
         margin-bottom: 7.5px;
 
         h3{            
             font-size: 22px;
-            margin: 15px 0;
+            margin: $mediumSpacing 0;
             font-weight: 400;
-            color: #222222;
+            color: $secondaryColor;
         }
         p{
             text-align: left;
-            color: #222222;
+            color: $secondaryColor
         }
 
         & > :last-child{

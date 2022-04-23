@@ -1,11 +1,8 @@
 @use "../scss/abstracts/" as *;
 
 .footer{
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     @include flex();
-    background-color: #222222;    
+    background-color: $secondaryColor;    
     width: 100%;
     height: 165px;
 }

@@ -1,13 +1,9 @@
 @use "../scss/abstracts/" as *;
 
 .hamburgericon {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-around;
-  // align-items: flex-end;
   @include flex(column, space-around, flex-end);
-  width: 25px;
-  height: 25px;
+  width: $hamburgerIconSize;
+  height: $hamburgerIconSize;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -17,7 +13,7 @@
     display: block;
     position: relative;
     height: 2px;
-    background-color: var(--primaryColor);;
+    background-color: $primaryColor;
   }  
 
   .first,
@@ -33,7 +29,7 @@
   &.open{
     .first, .third{
       transform-origin: 3%;
-      background-color: #fff;
+      background-color: $text-color;
     }
     .first{     
         transform: rotate(45deg);      

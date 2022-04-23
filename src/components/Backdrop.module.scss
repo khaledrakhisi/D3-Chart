@@ -1,18 +1,14 @@
 @use "../scss/abstracts/" as *;
 
 .backdrop{
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-start;
-    // align-items: center;
     @include flex(column, flex-start);
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height:100vh;
-    background: #EF233C 0% 0% no-repeat padding-box;
-    color: #fff;
+    background: $bg;
+    color: $text-color;
     padding-top: 142px;
 
     .brand{

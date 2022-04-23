@@ -2,21 +2,18 @@
 
 menu {
     .menuitem {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
         @include flex();
-        margin: 30px 8px;
+        margin: $extraLargeSpacing $smallSpacing;
 
         .icon {
-            margin: 0 8px;
-            fill:#fff;
+            margin: 0 $smallSpacing;
+            fill:$text-color;
         }        
         &:hover, &:hover .icon {
-            color: #EF233C;
-            fill: #EF233C;
+            color: $primaryColor;
+            fill: $primaryColor;
             &.inverse{
-                fill: #fff;
+                fill: $text-color;
             }
         }        
     }
@@ -24,11 +21,7 @@ menu {
         margin-right: auto;        
     }
 
-    // @media (min-width: 768px) {
     @include tablet {
-        // display: flex;
-        // justify-content: flex-end;
-        // align-items: center;
         @include flex(row, flex-end, center);
     } 
 }

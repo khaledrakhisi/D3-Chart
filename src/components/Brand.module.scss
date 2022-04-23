@@ -1,11 +1,13 @@
+@use "../scss/abstracts/" as *;
+
 .brand{
-    margin: 30px;
+    margin: $extraLargeSpacing;
     .icon{
         z-index: 4;
-        fill:#EF233C;
+        fill:$primaryColor;
         
         &.inversed{
-            fill: #fff;
+            fill: $text-color;
         }
     }
 }

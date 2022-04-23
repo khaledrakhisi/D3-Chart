@@ -1,15 +1,12 @@
 @use "../scss/abstracts/" as *;
 
 .avatar{
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     @include flex();
     overflow: hidden;
     position: relative;
     width: 53px;
     height: 53px;
-    background: #EF233C 0% 0% no-repeat padding-box;
+    background: $bg;
     border-radius: 100%;
     z-index: 4;
 
@@ -17,11 +14,11 @@
         z-index: 4;
 
         &.inversed{
-            fill: #EF233C;
+            fill: $primaryColor
         }
     }
 
     &.inversed{
-        background: #222222 0% 0% no-repeat padding-box;        
+        background-color: $secondaryColor;
     }
 }

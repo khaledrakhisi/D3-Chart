@@ -1,28 +1,32 @@
 @use "../scss/abstracts/" as *;
 
+@mixin actionHeading($color) {
+  color: $color;
+  border-left: 2px solid $color;
+}
+@mixin actionBoxSize($size: 300px) {
+  min-width: $size;
+  min-height: $size;
+  max-width: $size;
+  max-height: $size;
+}
+
 .container {
-  // display: flex;
-  // flex-direction: column;
   @include flex(column);
   width: 100vw;
 
-  h1{        
+  h1{
     margin: 30px;
-    padding: 8px 24px;
+    padding: $smallSpacing $largeSpacing;
     font: italic normal 300 28px/30px Roboto;
-    border-left: 1px solid #fff;
+    @include actionHeading($text-color)
   }
 
     .top{
-        // display: flex;
-        // flex-direction: column;
         @include flex(column);
 
         .info {
-            width: 100%;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
+            width: 100%;            
             @include flex();
             background-color: #0d455d;
 
@@ -39,99 +43,77 @@
           .actions {
             @include flex(column);
             width: 100%;
-            padding: 30px;                    
-            background-color: #ffffff;
+            padding: $extraLargeSpacing;                                
         
             .action1 {
-              background-color: #f0f0f3;
-              margin: 0 0 24px 0;
+              background-color: $card-bgc;
+              margin: 0 0 $largeSpacing 0;
             
               h1{
-                color: #EF233C;                
-                border-left: 1px solid #EF233C;
+                @include actionHeading($primaryColor);
               }
               article{
-                color: #222222;
+                color: $secondaryColor;
                 @include ellipsesOverflow(6);
               }
         
-              // @media (min-width: 768px) {
-              @include tablet{
-                border-radius: 0 0 0 24px;
-                margin: 0 24px 0 0;
-                min-width: 300px;
-                min-height: 300px;
-                max-width: 300px;
-                max-height: 300px;
+              @include tablet{                
+                @include actionBoxSize();
+                border-radius: 0 0 0 $largeBorderRadius;
+                margin: 0 $largeSpacing 0 0;
               }
             }
         
             .action2 {
-              background-color: #f0f0f3;
-              border-radius: 0 0 0 24px;
+              background-color: $card-bgc;
+              border-radius: 0 0 0 $largeBorderRadius;
               h1{
-                color: #EF233C;                
-                border-left: 1px solid #EF233C;
+                @include actionHeading($primaryColor);
               }
               article{
-                color: #222222;
-                @include ellipsesOverflow(6);
-              }  
-              button{
-                margin-top: 35px;
-              }
+                color: $secondaryColor;
+                @include flex(column);
+                height: 100%;                
+                                
+                & > :last-child{
+                  // margin-top: 35px;
+                  margin-top: auto;
+                }
+              }                
         
-              // @media (min-width: 768px) {
               @include tablet{
-                border-radius: 0 0 0 0;
-                min-width: 300px;
-                min-height: 300px;
-                max-width: 300px;
-                max-height: 300px;
+                @include actionBoxSize();
+                border-radius: 0 0 0 0;                
               }
             }
         
-            // @media (min-width: 768px) {            
-            @include tablet{
-              // flex-direction: row;
-              // justify-content: center;
-              // align-items: center;
+            @include tablet{              
               @include flex();
               overflow: hidden;      
             }
           }
-
-          // @media (min-width: 768px) {
-          @include tablet{
-            // flex-direction: row;
+          
+          @include tablet{            
             @include flex(row, center, stretch);
           }
     }
 
 
   .data {    
-    width: 100%;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    width: 100%;    
     @include flex();
-    background-color: #f0f0f3;
-    padding-top: 24px;
+    background-color: $card-bgc;
+    padding-top: $largeSpacing;
     
     .chart{
-      // width: 810px;
       .pt{
-        // display: flex;
-        // justify-content: center;
         @include flex();
         h1{
-          color: #EF233C;
-          // repeat
-          border-left: 1px solid #EF233C;
+          @include actionHeading($primaryColor);
         }
       }      
       section{
-        color: #222222;
+        color: $secondaryColor;
       }
     }
   }

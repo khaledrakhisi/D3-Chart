@@ -45,9 +45,10 @@ body {
     to go underneath the header */
   padding-top: 90px; 
 
-  background-color: $bgc;
+  background-color: $bg;
   color: $text-color;
-  font-family: $fontFamily;
+  // font-family: ;
+  font: normal normal 100 16px/24px $fontFamily;
   font-size: $fontSizeBodyLarge;
   line-height: 1.5em;
   overflow-x: hidden;
@@ -158,10 +159,10 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background-color: var($bgc);
+  background: $bg;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var($secondaryColor);
+  background-color: $secondaryColor;
   border-radius: 100vw;
 }

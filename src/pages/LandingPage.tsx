@@ -66,8 +66,10 @@ const LandingPage = () => {
                   caption: <h1>Stocks</h1>,
                   content: (
                     <article>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Mauris fermentum elit id auctor mollis.
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Mauris fermentum elit id auctor mollis.
+                      </p>
                       <Button>Explore &#8594;</Button>
                     </article>
                   ),
@@ -87,8 +89,8 @@ const LandingPage = () => {
                     <h1>Your products</h1>
                   </div>
                 ),
-                // content: <ChartBar data={loggedinUser.data} axisYMax={1000} />,
-                content: "",
+                content: <ChartBar data={loggedinUser.data} axisYMax={1000} />,
+                // content: "",
               },
             ]}
           />
