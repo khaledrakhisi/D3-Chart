@@ -6,7 +6,7 @@ interface IHamburgerMenuProps {
   onClick: (isExpanded: boolean) => void;
 }
 
-export const HamburgerMenu: React.FunctionComponent<IHamburgerMenuProps> = ({
+export const HamburgerIcon: React.FunctionComponent<IHamburgerMenuProps> = ({
   onClick,
 }) => {
   const [isContextMenuExpanded, setIsContextMenuExpanded] =

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 
+import { TUserContext } from "../@types/user";
 import { Button } from "../components/Button";
 import { Carousel, TCarouselSlide } from "../components/Carousel";
 import { ChartBar } from "../components/ChartBar";
-import { IUserData } from "../interfaces/IUserData";
+import { UserContext } from "../context/user-context";
 
-import classes from "./HomePage.module.scss";
+import classes from "./LandingPage.module.scss";
 
 const slides: Array<TCarouselSlide> = [
   {
@@ -28,15 +29,9 @@ const slides: Array<TCarouselSlide> = [
   },
 ];
 
-const DATA: IUserData[] = [
-  { label: "LIQID Cash", value: 920 },
-  { label: "LIQID Real Estate", value: 630 },
-  { label: "LIQID Wealth", value: 850 },
-  { label: "LIQID Private Equity", value: 220 },
-  { label: "LIQID Venture", value: 510 },
-];
+const LandingPage = () => {
+  const { loggedinUser } = useContext(UserContext) as TUserContext;
 
-const HomePage = () => {
   return (
     <main className={classes.container}>
       <section className={classes.top}>
@@ -92,7 +87,8 @@ const HomePage = () => {
                     <h1>Your products</h1>
                   </div>
                 ),
-                content: <ChartBar data={DATA} axisYMax={1000} />,
+                // content: <ChartBar data={loggedinUser.data} axisYMax={1000} />,
+                content: "",
               },
             ]}
           />
@@ -102,4 +98,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default LandingPage;

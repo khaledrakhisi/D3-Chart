@@ -1,0 +1,39 @@
+@use "../scss/abstracts/" as *;
+
+.login{   
+    @include flex();
+    width: 100%;
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    form{        
+        @include flex(column);
+
+        width: 280px;
+        height: 450px;
+
+        padding: 24px;
+
+        background-color: #fff;
+        box-shadow: $mainBoxShadow;
+        margin-top: 7.5px;
+        margin-bottom: 7.5px;
+
+        h3{            
+            font-size: 22px;
+            margin: 15px 0;
+            font-weight: 400;
+            color: #222222;
+        }
+        p{
+            text-align: left;
+            color: #222222;
+        }
+
+        & > :last-child{
+            margin-top: auto;
+        }
+    }
+}
+

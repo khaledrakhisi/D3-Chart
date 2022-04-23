@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-import { ReactComponent as ExitIcon } from "../assets/images/exit.svg";
-import { ReactComponent as HomeIcon } from "../assets/images/home.svg";
-import { ReactComponent as SettingsIcon } from "../assets/images/settings.svg";
-import { ReactComponent as UserIcon } from "../assets/images/user.svg";
+import { TUserContext } from "../@types/user";
+import { UserContext } from "../context/user-context";
 
 import Avatar from "./Avatar";
 import { Backdrop } from "./Backdrop";
-import { HamburgerMenu } from "./HamburgerIcon";
+import { Brand } from "./Brand";
+import { HamburgerIcon } from "./HamburgerIcon";
 import { Menu } from "./Menu";
 
 import classes from "./NavBar.module.scss";
@@ -21,6 +20,8 @@ const NavBar: React.FunctionComponent = () => {
     setIsContextMenuExpanded(isExpanded);
   };
 
+  const { loggedinUser } = useContext(UserContext) as TUserContext;
+
   return (
     <>
       {isContextMenuExpanded && (
@@ -31,21 +32,25 @@ const NavBar: React.FunctionComponent = () => {
         </React.Fragment>
       )}
       <nav className={classes.navBar}>
-        <div className={classes.userinfo}>
-          <NavLink to="/profile">
-            <Avatar isInversed={isContextMenuExpanded} />
-          </NavLink>
-          <span>Hallo,&nbsp;</span>
-          <NavLink className={classes.link} to="/profile">
-            {"LIQID!"}
-          </NavLink>
-        </div>
-        <div className={classes.divider} />
+        {loggedinUser ? (
+          <div className={classes.userinfo}>
+            <NavLink to="/profile">
+              <Avatar isInversed={isContextMenuExpanded} />
+            </NavLink>
+            <span>Hallo,&nbsp;</span>
+            <NavLink className={classes.link} to="/profile">
+              {`${loggedinUser.name}!`}
+            </NavLink>
+          </div>
+        ) : (
+          <Brand isInversed={false} />
+        )}
+        {loggedinUser && <div className={classes.divider} />}
         <section className={classes.topmenu}>
           <Menu />
         </section>
         <div className={classes.hamburger}>
-          <HamburgerMenu onClick={HamburgerIconClickHandler} />
+          <HamburgerIcon onClick={HamburgerIconClickHandler} />
         </div>
       </nav>
     </>

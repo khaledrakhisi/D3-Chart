@@ -9,7 +9,7 @@ import {
   select,
 } from "d3";
 
-import { IUserData } from "../interfaces/IUserData";
+import { IUserData } from "../@types/user";
 
 // import classes from "./ChartBar.module.scss";
 

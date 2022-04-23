@@ -1,6 +1,9 @@
+@use "../scss/abstracts/" as *;
+
 .container {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: column;
+  @include flex(column);
 
   width: 100vw;
 
@@ -11,18 +14,21 @@
 
     // pepeat
     border-left: 1px solid #fff;
-}
+  }
 
     .top{
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        @include flex(column);
+        
 
         .info {
             width: 100%;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            @include flex();
         
             background-color: #0d455d;
 
@@ -37,25 +43,22 @@
           }
         
           .actions {
+            @include flex(column);
+
             width: 100%;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-        
+            padding: 30px;                    
             background-color: #ffffff;
         
             .action1 {
               background-color: #f0f0f3;
               margin: 0 0 24px 0;
-            // padding: 24px;
+            
               h1{
-                color: #EF233C;
-                // repeat
+                color: #EF233C;                
                 border-left: 1px solid #EF233C;
               }
               article{
                 color: #222222;
-
                 overflow: hidden;
                 display: -webkit-box;
                 -webkit-line-clamp: 6;
@@ -76,8 +79,7 @@
               background-color: #f0f0f3;
               border-radius: 0 0 0 24px;
               h1{
-                color: #EF233C;
-                // repeat
+                color: #EF233C;                
                 border-left: 1px solid #EF233C;
               }
               article{
@@ -100,20 +102,18 @@
               }
             }
         
-            @media (min-width: 768px) {
-            //   width: 50%;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-
-              overflow: hidden;
-        
-            //   padding: 60px;
+            @media (min-width: 768px) {            
+              // flex-direction: row;
+              // justify-content: center;
+              // align-items: center;
+              @include flex();
+              overflow: hidden;      
             }
           }
 
           @media (min-width: 768px) {
-            flex-direction: row;
+            // flex-direction: row;
+            @include flex();
           }
     }
 
@@ -121,9 +121,10 @@
   .data {    
     width: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flex();
 
     background-color: #f0f0f3;
 
