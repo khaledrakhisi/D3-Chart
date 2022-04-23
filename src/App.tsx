@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 
 import { Footer } from "./components/Footer";
 import Header from "./components/Header";
@@ -8,11 +9,13 @@ import "./scss/App.scss";
 
 function App() {
   return (
-    <section className="app">
+    <React.Fragment>
       <Header />
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
       <Footer />
-    </section>
+    </React.Fragment>
   );
 }
 

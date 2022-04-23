@@ -24,21 +24,9 @@ export const HamburgerMenu: React.FunctionComponent<IHamburgerMenuProps> = ({
         }`}
         onClick={(e) => contextMenuButtonClickHandle(e)}
       >
-        <span
-          className={`${classes.first} ${
-            isContextMenuExpanded && classes.open
-          }`}
-        />
-        <span
-          className={`${classes.second} ${
-            isContextMenuExpanded && classes.open
-          }`}
-        />
-        <span
-          className={`${classes.third} ${
-            isContextMenuExpanded && classes.open
-          }`}
-        />
+        <span className={classes.first} />
+        <span className={classes.second} />
+        <span className={classes.third} />
       </button>
     </>
   );
