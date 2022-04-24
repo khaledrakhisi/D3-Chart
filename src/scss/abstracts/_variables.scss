@@ -4,23 +4,26 @@
 
  $bg: $primaryColor 0% 0% no-repeat padding-box;
  $card-bgc: #f0f0f3;
+ $dark-bg: #0d455d;
  $text-color: #fff;
 
  /* ****Font family**** */
  $fontFamily: "Roboto", sans-serif;
 
-
-//Body size
-$fontSizeBodySmall: 12px; //line-height:16px; letter-spacing:0.4%;
-$fontSizeBodyMedium: 14px; //line-height:20px; letter-spacing:0.25%;
-$fontSizeBodyLarge: 16px; //line-height:24px; letter-spacing:0.15%;
-//Headline size
+//Body font sizes
+$fontSizeBodySmall: 12px; 
+$lineHeightBodySmall: 16px;
+$fontSizeBodyMedium: 16px;
+$lineHeightBodyMedium: 24px;
+$fontSizeBodyLarge: 35px;
+$lineHeightBodyLarge: 35px;
+//Headline font sizes
 $fontSizeHeadlineSmall: 24px; //line-height:32px; letter-spacing:0;
 $fontSizeHeadlineMedium: 45px; //lineHeight:36px; letter-spacing:0;
 $fontSizeHeadlineLarge: 57px; //line-height:40px letter-spacing:0;
-//Display size
+//Display font sizes
 $fontSizeDisplaySmall: 64px; //line-height:44px; letter-spacing:0;
-//helper font size
+//helper font sizes
 $fontSizeTableStatus: 9px; //line-height:16px; letter-spacing:0.4%;
 
 /* ****Shadows**** */
@@ -33,6 +36,7 @@ $mediumBorderRadius: 12px; //for boxes
 $largeBorderRadius: 24px; //for tables and main section in tablet and mobile.
 
 /* ****Spacing **** */
+$extraSmallSpacing: 4px;
 $smallSpacing: 8px;
 $mediumSpacing: 16px;
 $largeSpacing: 24px;

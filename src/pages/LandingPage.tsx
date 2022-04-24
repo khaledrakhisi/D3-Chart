@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 
 import { TUserContext } from "../@types/user";
+import { ReactComponent as Arrow } from "../assets/images/arrow.svg";
 import { Button } from "../components/Button";
 import { Carousel, TCarouselSlide } from "../components/Carousel";
 import { ChartBar } from "../components/ChartBar";
@@ -45,7 +46,7 @@ const LandingPage = () => {
             <Carousel
               slides={[
                 {
-                  caption: <h1>Investments</h1>,
+                  caption: <h2>Investments</h2>,
                   content: (
                     <article>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -63,7 +64,7 @@ const LandingPage = () => {
             <Carousel
               slides={[
                 {
-                  caption: <h1>Stocks</h1>,
+                  caption: <h2>Stocks</h2>,
                   content: (
                     <article>
                       <p>
@@ -89,8 +90,18 @@ const LandingPage = () => {
                     <h1>Your products</h1>
                   </div>
                 ),
-                content: <ChartBar data={loggedinUser.data} axisYMax={1000} />,
                 // content: "",
+                content: (
+                  <>
+                    <ChartBar data={loggedinUser.data} axisYMax={1000} />
+                    <Arrow
+                      className={classes.arrow}
+                      onClick={({ currentTarget }) => {
+                        currentTarget.classList.toggle("toleft");
+                      }}
+                    />
+                  </>
+                ),
               },
             ]}
           />

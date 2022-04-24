@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import {
   axisBottom,
   axisLeft,
+  format,
+  formatDefaultLocale,
   ScaleBand,
   scaleBand,
   ScaleLinear,
@@ -11,7 +13,14 @@ import {
 
 import { IUserData } from "../@types/user";
 
-// import classes from "./ChartBar.module.scss";
+import classes from "./ChartBar.module.scss";
+
+formatDefaultLocale({
+  decimal: ".",
+  thousands: ",",
+  grouping: [3],
+  currency: ["", "€"],
+});
 
 interface AxisBottomProps {
   scale: ScaleBand<string>;
@@ -37,11 +46,13 @@ function AxisLeft({ scale }: AxisLeftProps) {
 
   useEffect(() => {
     if (ref.current) {
-      select(ref.current).call(axisLeft(scale));
+      select(ref.current).call(
+        axisLeft(scale).tickSizeInner(12).tickFormat(format("$"))
+      );
     }
   }, [scale]);
 
-  return <g ref={ref} width={300} />;
+  return <g ref={ref} width={200} fontSize={9} className="leftaxis" />;
 }
 
 interface BarsProps {
@@ -58,21 +69,30 @@ function Bars({ data, width, height, scaleX, scaleY }: BarsProps) {
         // const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
         return (
-          <g key={`bar-${label}`}>
+          <g
+            key={`bar-${label}`}
+            className={classes.bar}
+            // x={scaleX(label)! + scaleX.bandwidth() / 2 - width / 2}
+            // y={scaleY(value)}
+          >
             <text
-              x={scaleX(label)! + scaleX.bandwidth() / 2 - width / 2}
-              y={scaleY(value)}
+              className={classes.label}
+              x={scaleX(label)! + scaleX.bandwidth() / 2}
+              y={scaleY(value) - 10}
             >
               {value}€
             </text>
             <rect
+              className={classes.bar}
               x={scaleX(label)! + scaleX.bandwidth() / 2 - width / 2}
               y={scaleY(value)}
               // width={scaleX.bandwidth()}
               width={width}
               height={height - scaleY(value)}
               fill={color}
-            />
+            >
+              <title>Sales were 8949000 in 1980</title>
+            </rect>
           </g>
         );
       })}
@@ -88,8 +108,8 @@ export const ChartBar: React.FunctionComponent<IBarChartProps> = ({
   data,
   axisYMax,
 }) => {
-  const margin = { top: 10, right: 0, bottom: 20, left: 30 };
-  const width = 600 - margin.left - margin.right;
+  const margin = { top: 10, right: 0, bottom: 20, left: 50 };
+  const width = 700 - margin.left - margin.right;
   const height = 300 - margin.top - margin.bottom;
 
   const scaleX = scaleBand()
@@ -100,10 +120,7 @@ export const ChartBar: React.FunctionComponent<IBarChartProps> = ({
     .range([height, 0]);
 
   return (
-    <svg
-      width={width + margin.left + margin.right}
-      height={height + margin.top + margin.bottom}
-    >
+    <svg className={classes.barchart}>
       <g transform={`translate(${margin.left}, ${margin.top})`}>
         <AxisBottom scale={scaleX} transform={`translate(0, ${height})`} />
         <AxisLeft scale={scaleY} />

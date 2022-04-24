@@ -14,8 +14,6 @@
     section{ 
         color: $text-color;
         text-align: left;
-        letter-spacing: 0px;
-        margin: 0 $extraLargeSpacing;
-        flex: 1;
+        padding: $largeSpacing;
     }
 }

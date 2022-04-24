@@ -6,7 +6,7 @@
     .userinfo {
         @include flex();
         font-style: italic;
-        z-index: 3;
+        z-index: 4;
 
         span{
             margin-left: $mediumSpacing;

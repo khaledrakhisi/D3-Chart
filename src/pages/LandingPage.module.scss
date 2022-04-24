@@ -14,21 +14,23 @@
 .container {
   @include flex(column);
   width: 100vw;
+  min-height: 100vh;
 
-  h1{
-    margin: 30px;
-    padding: $smallSpacing $largeSpacing;
-    font: italic normal 300 28px/30px Roboto;
+  h1, h2{
+    margin: $extraLargeSpacing $extraLargeSpacing 0;
+    padding: $extraSmallSpacing $largeSpacing;
     @include actionHeading($text-color)
   }
 
     .top{
         @include flex(column);
+        width: 100vw;
+        flex: 1;
 
         .info {
             width: 100%;            
             @include flex();
-            background-color: #0d455d;
+            background-color: $dark-bg;
 
             .carousel{
                 max-width: 700px;
@@ -49,7 +51,7 @@
               background-color: $card-bgc;
               margin: 0 0 $largeSpacing 0;
             
-              h1{
+              h2{
                 @include actionHeading($primaryColor);
               }
               article{
@@ -67,7 +69,7 @@
             .action2 {
               background-color: $card-bgc;
               border-radius: 0 0 0 $largeBorderRadius;
-              h1{
+              h2{
                 @include actionHeading($primaryColor);
               }
               article{
@@ -83,7 +85,7 @@
         
               @include tablet{
                 @include actionBoxSize();
-                border-radius: 0 0 0 0;                
+                border-radius: 0;                
               }
             }
         
@@ -102,18 +104,44 @@
   .data {    
     width: 100%;    
     @include flex();
+    flex: 1;
     background-color: $card-bgc;
     padding-top: $largeSpacing;
+    overflow: hidden;
     
     .chart{
+      margin-bottom: 50px;
       .pt{
-        @include flex();
+        
         h1{
           @include actionHeading($primaryColor);
+        }
+
+        @include tablet{
+          @include flex();
         }
       }      
       section{
         color: $secondaryColor;
+        @include flex(column);
+
+        .arrow{
+          border: none;
+          margin-top: $largeSpacing;
+          font-size: 32px;
+
+          &.toleft{
+            transform: scaleX(-1);
+          }
+
+          @include tablet{
+            display: none;
+          }
+        }        
+      }
+
+      @include tablet{
+        margin-bottom: 100px;
       }
     }
   }

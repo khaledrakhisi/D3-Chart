@@ -1,16 +1,45 @@
-#BarChart { 
-    display: flex; 
-    flex-direction: row; /* Arrange the Bars Horizontally using FlexBox  */
-    align-items: flex-end; /* Have the bars start at the bottom and go up */
-    justify-content: center; /* Center the bars in the middle of the screen */
-    margin: 50px;
+@use "../scss/abstracts/" as *;
 
-    // width: 810px;
+.barchart { 
+    // display: flex; 
+    // flex-direction: row; /* Arrange the Bars Horizontally using FlexBox  */
+    // align-items: flex-end; /* Have the bars start at the bottom and go up */
+    // justify-content: center; /* Center the bars in the middle of the screen */
+    // margin: 50px;
+
+    width: 345px;
+    height: 313px;
+
+    @include tablet{
+      width: 700px;
+      height: 300px
+    }
   }
   
   .bar {
     display: flex;
     flex-direction: column;
-    // background-color: #3aa70f; /* Have each bar be a nice green */
-    // width: 10px; /* The animation will start with each bar being 10px wide, and then expand outwards */
+    justify-content: center;
+    align-items: center;
+
+    text-anchor: middle;
   }
+
+  text, .label{
+    font: inherit;
+      font-size: 12px;
+  }
+
+  .label{
+    margin: 24px;
+  }
+
+  .tooltip {
+    color: rgb(37, 194, 37);
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    padding: 10px;
+    border: 3px solid white;
+    box-shadow: 0 0px 10px black;
+}
+  

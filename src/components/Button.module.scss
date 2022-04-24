@@ -8,9 +8,6 @@
     border-radius: 0px 0px 0px $mediumBorderRadius;
     border: none;
     cursor: pointer;
-    
-    font: normal normal 300 16px/24px Roboto;
-    letter-spacing: 0px;
 
     &:hover{
         background-color: lighten($primaryColor, 5);
