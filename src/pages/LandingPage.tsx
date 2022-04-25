@@ -4,7 +4,7 @@ import { TUserContext } from "../@types/user";
 import { ReactComponent as Arrow } from "../assets/images/arrow.svg";
 import { Button } from "../components/Button";
 import { Carousel, TCarouselSlide } from "../components/Carousel";
-import { ChartBar } from "../components/ChartBar";
+import { ChartBar } from "../components/chart-bar/ChartBar";
 import { UserContext } from "../context/user-context";
 
 import classes from "./LandingPage.module.scss";

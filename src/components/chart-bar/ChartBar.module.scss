@@ -1,0 +1,21 @@
+@use "../../scss/abstracts/" as *;
+
+.barchart { 
+    width: 345px;
+    height: 313px;
+
+    @include tablet{
+      width: 700px;
+      height: 300px
+    }
+}
+
+  .tooltip {
+    color: rgb(37, 194, 37);
+    font-family: Arial, Helvetica, sans-serif;
+    background: black;
+    padding: 10px;
+    border: 3px solid white;
+    box-shadow: 0 0px 10px black;
+}
+  

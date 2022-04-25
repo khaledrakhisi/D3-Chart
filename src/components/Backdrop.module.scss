@@ -3,15 +3,17 @@
 .backdrop{
     @include flex(column, flex-start);
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100vw;
     height:100vh;
     background: $bg;
     color: $text-color;
     padding-top: 142px;
 
-    .brand{
+    @include fadeInSlide();
+
+    // Brand LOGO moves at the very bottom
+    & > :last-child{
         margin-top: auto;
     }
 }

@@ -1,7 +1,7 @@
 export interface IUserData {
-  label: string;
+  product: string;
   value: number;
-  color: string;
+  color?: string;
 }
 export interface IUser {
   id: number;

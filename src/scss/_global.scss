@@ -1,10 +1,6 @@
 @use "./abstracts/" as *;
 @import url(../assets/fonts/css/roboto.css);
 
-// html {
- 
-// }
-
 *,
 *::before,
 *::after {
@@ -48,7 +44,7 @@ h2{
 body {
   /* Add some padding on document's body to prevent the content
     to go underneath the header */
-  padding-top: 90px; 
+  padding-top: $mainHeaderSize; 
 
   background-color: $bg;
   color: $text-color;
@@ -57,52 +53,6 @@ body {
   letter-spacing: 0px;
   overflow-x: hidden;
 }
-
-@include tablet {
-  .topNav_left_menu_open {
-    display: block;
-  }
-
-  .topNav_left_menu_close {
-    display: none;
-  }
-}
-
-@include tablet {
-  .sidebar__open .main_wrapper {
-    height: 100vh;
-    overflow: hidden;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    transform: scale(0.9) translateX(45%);
-    transition: all 0.5s ease-in-out;
-    box-shadow: $secondBoxShadow;
-  }
-
-  .sidebar__open .topNav_left_menu_open {
-    display: none;
-  }
-
-  .sidebar__open .topNav_left_menu_close {
-    display: block;
-  }
-}
-
-@include mobile {
-  .sidebar__open .main_wrapper {
-    transform: scale(0.9) translateX(60%);
-  }
-}
-
-#overlay-root > div {
-  padding: 0;
-}
-
-.main_wrapper {
-  transform: scale(1) translateX(0);
-  // transition: all 0.5s ease-in-out;
-}
-
 
 //$-------- scrollbar styles
 ::-webkit-scrollbar {

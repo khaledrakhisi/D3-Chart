@@ -2,10 +2,9 @@
 
 .brand{
     margin: $extraLargeSpacing;
-    .icon{
-        z-index: 4;
+    .icon{        
         fill:$primaryColor;
-        
+    
         &.inversed{
             fill: $text-color;
         }

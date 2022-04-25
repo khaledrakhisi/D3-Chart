@@ -5,8 +5,8 @@
 
     .userinfo {
         @include flex();
+        position: relative;
         font-style: italic;
-        z-index: 4;
 
         span{
             margin-left: $mediumSpacing;

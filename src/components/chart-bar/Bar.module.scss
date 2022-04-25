@@ -1,0 +1,14 @@
+@use "../../scss/abstracts/" as *;
+
+.bar {
+    text-anchor: middle;
+}
+
+text, .label {
+    font: inherit;
+      font-size: 12px;
+}
+
+.label {
+    margin: 24px;
+}

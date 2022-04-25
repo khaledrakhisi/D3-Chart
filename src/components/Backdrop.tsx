@@ -6,17 +6,17 @@ import classes from "./Backdrop.module.scss";
 
 interface IBackdropProps {
   children: React.ReactNode;
+  onClickHandle: (event: React.MouseEvent) => void;
 }
 
 export const Backdrop: React.FunctionComponent<IBackdropProps> = ({
   children,
+  onClickHandle,
 }) => {
   return (
-    <aside className={classes.backdrop}>
+    <aside className={classes.backdrop} onClick={(e) => onClickHandle}>
       {children}
-      <section className={classes.brand}>
-        <Brand isInversed />
-      </section>
+      <Brand isInversed />
     </aside>
   );
 };

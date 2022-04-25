@@ -20,18 +20,24 @@ const NavBar: React.FunctionComponent = () => {
     setIsContextMenuExpanded(isExpanded);
   };
 
+  const h = () => {
+    setIsContextMenuExpanded(false);
+    // console.log("jkhkjhkjh");
+  };
+
   const { loggedinUser } = useContext(UserContext) as TUserContext;
 
   return (
     <>
       {isContextMenuExpanded && (
-        <React.Fragment>
-          <Backdrop>
-            <Menu />
-          </Backdrop>
-        </React.Fragment>
+        <Backdrop onClickHandle={h}>
+          <Menu />
+        </Backdrop>
       )}
       <nav className={classes.navBar}>
+        {/* In this section when ever the user is loggedin, her/his Avatar and a greeting message will be shown,
+        otherwise just a LOGO will be shown instead.
+        */}
         {loggedinUser ? (
           <div className={classes.userinfo}>
             <NavLink to="/profile">
@@ -43,6 +49,7 @@ const NavBar: React.FunctionComponent = () => {
             </NavLink>
           </div>
         ) : (
+          // if user not loggedin
           <Brand isInversed={false} />
         )}
         {loggedinUser && <div className={classes.divider} />}

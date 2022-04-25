@@ -8,11 +8,8 @@
     height: 53px;
     background: $bg;
     border-radius: 100%;
-    z-index: 4;
 
     .icon{
-        z-index: 4;
-
         &.inversed{
             fill: $primaryColor
         }

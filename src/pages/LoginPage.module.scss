@@ -3,8 +3,10 @@
 .login{   
     @include flex();
     width: 100%;
+    min-height: calc(100vh - $mainHeaderSize);
     padding-top: 50px;
     padding-bottom: 50px;
+    background-color: $card-bgc;
 
     form{        
         @include flex(column);
@@ -17,7 +19,7 @@
         margin-bottom: 7.5px;
 
         h3{            
-            font-size: 22px;
+            font-size: $fontSizeHeadlineSmall;
             margin: $mediumSpacing 0;
             font-weight: 400;
             color: $secondaryColor;

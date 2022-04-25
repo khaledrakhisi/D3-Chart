@@ -15,7 +15,7 @@
 }
 
 @mixin mobile {
-  @media only screen and (min-width: $mobile-width) {
+  @media only screen and (max-width: $mobile-width) {
     @content;
   }
 }
@@ -23,5 +23,21 @@
 @mixin tablet {
   @media only screen and (min-width: $tablet-width) {
     @content;
+  }
+}
+
+@mixin fadeInSlide {
+  animation: fadeInSlideAnimation ease 400ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInSlideAnimation {
+  0%{
+      opacity: 0;
+      transform: translateX(-300px);
+  }
+  100%{
+      opacity: 1;
   }
 }
