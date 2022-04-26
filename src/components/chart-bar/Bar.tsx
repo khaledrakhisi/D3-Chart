@@ -3,7 +3,7 @@ import React from "react";
 import { IUserData } from "../../@types/user";
 
 import { AxisBottomProps } from "./BottomAxis";
-import { IBarChartProps } from "./ChartBar";
+import { IBarChartProps } from "./Chart";
 import { AxisLeftProps } from "./LeftAxis";
 
 import classes from "./Bar.module.scss";

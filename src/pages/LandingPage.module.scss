@@ -4,7 +4,7 @@
   color: $color;
   border-left: 2px solid $color;
 }
-@mixin actionBoxSize($size: 330px) {
+@mixin actionBoxSize($size: 300px) {
   min-width: $size;
   min-height: $size;
   max-width: $size;
@@ -50,14 +50,13 @@
               background-color: $card-bgc;
               margin: 0 0 $largeSpacing 0;
             
-              h2{
+              & > h2{
                 @include actionHeading($primaryColor);
               }
-              article{
+              & > article{
                 color: $secondaryColor;
                 margin: $extraLargeSpacing $extraLargeSpacing;
-                // padding: $smallSpacing;
-                // @include ellipsesOverflow(6);
+                @include overflowEllipses(7);
               }
         
               @include tablet{                
@@ -75,12 +74,12 @@
                 @include actionHeading($primaryColor);
               }
               section{
-                @include flex(column, flex-start);
-                color: $secondaryColor;                
+                @include flex(column, flex-start);                
                 margin: $extraLargeSpacing $extraLargeSpacing;
                 flex: 1;
 
                 & > article {
+                  color: $secondaryColor;
                   @include flex(column, flex-start);
                   flex: 1;
 
@@ -91,20 +90,16 @@
                   & > :last-child{
                     margin-top: 35px;
                   
-                  @include tablet {
-                    margin-top: auto;
+                    @include tablet {
+                      margin-top: auto;
+                    }
                   }
-                }
-                }                                              
-
-                @include tablet {
-                  // height: 200px;
                 }
               }                
         
               @include tablet{
                 @include actionBoxSize();
-                border-radius: 0;                
+                border-radius: 0;             
               }
             }
         
@@ -137,7 +132,7 @@
           @include flex();
         }
     }      
-    .chartitself{        
+    .chartitself {        
         color: $secondaryColor;
         padding: $largeSpacing;
         width: 100%;
@@ -150,10 +145,9 @@
 
     .arrow {
       width: 100%;
-      &.toleft{
-        transform: scaleX(-1);
-      }
 
+      transition: all ease 400ms;
+    
       @include tablet {
         display: none;
       }

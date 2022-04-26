@@ -8,7 +8,7 @@ import { AxisBottom } from "./BottomAxis";
 import { AxisLeft } from "./LeftAxis";
 import { Tooltip } from "./Tooltip";
 
-import classes from "./ChartBar.module.scss";
+import classes from "./Chart.module.scss";
 
 formatDefaultLocale({
   decimal: ".",
@@ -21,7 +21,7 @@ export interface IBarChartProps {
   data: Array<IUserData>;
   axisYMax?: number;
 }
-export const ChartBar: React.FunctionComponent<IBarChartProps> = ({
+export const Chart: React.FunctionComponent<IBarChartProps> = ({
   data,
   axisYMax,
 }) => {

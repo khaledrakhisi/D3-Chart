@@ -1,10 +1,10 @@
 import React, { useContext, useRef } from "react";
 
 import { TUserContext } from "../@types/user";
-import { ReactComponent as Arrow } from "../assets/images/arrow.svg";
+import { ArrowIcon, EArrowDirection } from "../components/ArrowIcon";
 import { Button } from "../components/Button";
 import { Carousel, TCarouselSlide } from "../components/Carousel";
-import { ChartBar } from "../components/chart-bar/ChartBar";
+import { Chart } from "../components/chart-bar/Chart";
 import { UserContext } from "../context/user-context";
 
 import classes from "./LandingPage.module.scss";
@@ -33,6 +33,10 @@ const slides: Array<TCarouselSlide> = [
 const LandingPage = () => {
   const { loggedinUser } = useContext(UserContext) as TUserContext;
   const chartRef = useRef<HTMLDivElement | null>(null);
+
+  const arrowClickHandle = (dir: EArrowDirection) => {
+    chartRef.current!.scrollLeft += 350 * dir;
+  };
 
   return (
     <main className={classes.container}>
@@ -88,16 +92,9 @@ const LandingPage = () => {
           <h1>Your products</h1>
         </div>
         <div className={classes.chartitself} ref={chartRef}>
-          <ChartBar data={loggedinUser.data} axisYMax={1000} />
+          <Chart data={loggedinUser.data} axisYMax={1000} />
         </div>
-
-        <Arrow
-          className={`${classes.arrow} toleft`}
-          onClick={({ currentTarget }) => {
-            currentTarget.classList.toggle("toleft");
-            chartRef.current!.scrollLeft += 350;
-          }}
-        />
+        <ArrowIcon onClick={arrowClickHandle} />
       </section>
     </main>
   );

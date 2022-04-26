@@ -7,7 +7,7 @@
   justify-content: $justifyContent;
 }
 
-@mixin ellipsesOverflow($maxLines: 3){
+@mixin overflowEllipses($maxLines: 3){
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: $maxLines;

@@ -7,13 +7,15 @@ menu {
 
         .icon {
             margin: 0 $smallSpacing;
-            fill:$text-color;
+            fill: $text-color;
         }        
         &:hover, &:hover .icon {
-            color: $primaryColor;
-            fill: $primaryColor;
-            &.inverse{
-                fill: $text-color;                
+            color: $secondaryColor;
+            fill: $secondaryColor;
+
+            @include tablet{                
+                color: $primaryColor;
+                fill: $primaryColor;
             }
         }        
     }
