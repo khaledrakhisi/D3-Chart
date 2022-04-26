@@ -32,12 +32,16 @@ select {
 }
 
 h1{  
-  font: italic normal 300 35px $fontFamily;
+  font: italic normal 300 $fontSizeHeadlineLarge $fontFamily;
   line-height: $lineHeightBodyLarge;
 }
 h2{  
-  font: italic normal 300 25px $fontFamily;
-  line-height: 33px;
+  font: italic normal 300 $fontSizeHeadlineMedium $fontFamily;
+  line-height: $lineHeightBodyLarge;
+}
+h3{
+  font: normal normal medium $fontSizeHeadlineSmall $fontFamily;
+  line-height: $lineHeightBodySmall;
 }
 
 //general styles

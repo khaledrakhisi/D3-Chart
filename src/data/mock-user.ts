@@ -5,10 +5,50 @@ export const liqidUser: IUser = {
   name: "LIQID",
   avatar: "/src/assets/images/Group 1.svg",
   data: [
-    { product: "LIQID Cash", value: 920, color: "#C9B7C5" },
-    { product: "LIQID Real Estate", value: 630, color: "#AFDDAF" },
-    { product: "LIQID Wealth", value: 850, color: "#076283" },
-    { product: "LIQID Private Equity", value: 220, color: "#79C6C0" },
-    { product: "LIQID Venture", value: 510, color: "#FFE163" },
+    {
+      product: {
+        name: "LIQID Cash",
+        total: 920,
+        initialInvest: 8,
+        growth: 1.0,
+      },
+      color: "#C9B7C5",
+    },
+    {
+      product: {
+        name: "LIQID Real Estate",
+        total: 630,
+        initialInvest: 100,
+        growth: 100,
+      },
+      color: "#AFDDAF",
+    },
+    {
+      product: {
+        name: "LIQID Wealth",
+        total: 850,
+        initialInvest: 85,
+        growth: 45,
+      },
+      color: "#076283",
+    },
+    {
+      product: {
+        name: "LIQID Private Equity",
+        total: 220,
+        initialInvest: 20,
+        growth: 30,
+      },
+      color: "#79C6C0",
+    },
+    {
+      product: {
+        name: "LIQID Venture",
+        total: 510,
+        initialInvest: 60,
+        growth: 60,
+      },
+      color: "#FFE163",
+    },
   ],
 };

@@ -6,6 +6,8 @@
  $card-bgc: #f0f0f3;
  $dark-bg: #0d455d;
  $text-color: #fff;
+ $chart-axis-text-color: #777777;
+ $chart-alt-text-color: #076283;
 
  /* ****Font family**** */
  $fontFamily: "Roboto", sans-serif;
@@ -18,17 +20,17 @@ $lineHeightBodyMedium: 24px;
 $fontSizeBodyLarge: 35px;
 $lineHeightBodyLarge: 35px;
 //Headline font sizes
-$fontSizeHeadlineSmall: 24px; //line-height:32px; letter-spacing:0;
-$fontSizeHeadlineMedium: 45px; //lineHeight:36px; letter-spacing:0;
-$fontSizeHeadlineLarge: 57px; //line-height:40px letter-spacing:0;
+$fontSizeHeadlineSmall: 12px; 
+$fontSizeHeadlineMedium: 25px; 
+$fontSizeHeadlineLarge: 37px;
 //Display font sizes
-$fontSizeDisplaySmall: 64px; //line-height:44px; letter-spacing:0;
+$fontSizeDisplaySmall: 64px; 
 //helper font sizes
-$fontSizeTableStatus: 9px; //line-height:16px; letter-spacing:0.4%;
+$fontSizeTableStatus: 9px; 
 
 /* ****Shadows**** */
 $mainBoxShadow: 0 1px 3px 0 rgba(37,39,49,.1);
-$secondBoxShadow: -3px 6px 30px 5px rgba(0, 0, 0, 0.3);
+$secondBoxShadow: 0px 2px 2px #00000029;
 
 /* ****Border radius**** */
 $smallBorderRadius: 4px; //for buttons
@@ -38,7 +40,7 @@ $largeBorderRadius: 24px; //for tables and main section in tablet and mobile.
 /* ****Spacing **** */
 $extraSmallSpacing: 4px;
 $smallSpacing: 8px;
-$mediumSpacing: 16px;
+$mediumSpacing: 12px;
 $largeSpacing: 24px;
 $extraLargeSpacing: 30px;
 

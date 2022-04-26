@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react";
 import { axisBottom, ScaleBand, select } from "d3";
 
+import classes from "./BottomAxis.module.scss";
+
 export interface AxisBottomProps {
   scale: ScaleBand<string>;
   transform: string;
@@ -10,9 +12,9 @@ export function AxisBottom({ scale, transform }: AxisBottomProps) {
 
   useEffect(() => {
     if (ref.current) {
-      select(ref.current).call(axisBottom(scale));
+      select(ref.current).call(axisBottom(scale).tickSizeInner(12));
     }
   }, [scale]);
 
-  return <g ref={ref} transform={transform} />;
+  return <g ref={ref} transform={transform} className={classes.bottomaxis} />;
 }

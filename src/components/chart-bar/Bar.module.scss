@@ -2,13 +2,10 @@
 
 .bar {
     text-anchor: middle;
-}
+    font: normal normal normal 14px $fontFamily;
+    color: $secondaryColor;
 
-text, .label {
-    font: inherit;
-      font-size: 12px;
-}
-
-.label {
-    margin: 24px;
+    &:hover{
+        
+    }    
 }

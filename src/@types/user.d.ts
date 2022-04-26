@@ -1,6 +1,7 @@
+import { IProduct } from "./product";
+
 export interface IUserData {
-  product: string;
-  value: number;
+  product: IProduct;
   color?: string;
 }
 export interface IUser {

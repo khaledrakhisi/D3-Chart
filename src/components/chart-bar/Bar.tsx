@@ -1,3 +1,7 @@
+import React from "react";
+
+import { IUserData } from "../../@types/user";
+
 import { AxisBottomProps } from "./BottomAxis";
 import { IBarChartProps } from "./ChartBar";
 import { AxisLeftProps } from "./LeftAxis";
@@ -10,32 +14,48 @@ export interface BarsProps {
   height: number;
   scaleX: AxisBottomProps["scale"];
   scaleY: AxisLeftProps["scale"];
+  onMouseOverHandle?: (datum: IUserData, e: React.MouseEvent) => void;
+  onMouseOutHandle?: (datum: IUserData) => void;
 }
-export function Bars({ data, width, height, scaleX, scaleY }: BarsProps) {
+export function Bars({
+  data,
+  width,
+  height,
+  scaleX,
+  scaleY,
+  onMouseOutHandle,
+  onMouseOverHandle,
+}: BarsProps) {
   return (
     <>
-      {data.map(({ value, product: label, color }) => {
+      {data.map((datum) => {
         /**Bars Color
          * I have no idea if the bars color is Random or pre-definded
          */
         const randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
         return (
-          <g key={`bar-${label}`} className={classes.bar}>
+          <g key={`bar-${datum.product.name}`} className={classes.bar}>
             <text
               className={classes.label}
-              x={scaleX(label)! + scaleX.bandwidth() / 2}
-              y={scaleY(value) - 10}
+              x={scaleX(datum.product.name)! + scaleX.bandwidth() / 2}
+              y={scaleY(datum.product.total) - 10}
             >
-              {value}€
+              {datum.product.total}€
             </text>
             <rect
               className={classes.bar}
-              x={scaleX(label)! + scaleX.bandwidth() / 2 - width / 2}
-              y={scaleY(value)}
+              x={
+                scaleX(datum.product.name)! + scaleX.bandwidth() / 2 - width / 2
+              }
+              y={scaleY(datum.product.total)}
               width={width}
-              height={height - scaleY(value)}
-              fill={color || randomColor}
+              height={height - scaleY(datum.product.total)}
+              fill={datum.color || randomColor}
+              onMouseMove={(e) => {
+                onMouseOverHandle?.(datum, e);
+              }}
+              onMouseOut={() => onMouseOutHandle?.(datum)}
             />
           </g>
         );

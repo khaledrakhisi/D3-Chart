@@ -8,7 +8,7 @@
         position: relative;
         font-style: italic;
 
-        span{
+        & > span{
             margin-left: $mediumSpacing;
         }
         .link{            

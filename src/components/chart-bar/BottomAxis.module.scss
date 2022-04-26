@@ -1,1 +1,11 @@
 @use "../../scss/abstracts/" as *;
+
+.bottomaxis {
+    font-size: 14px;
+    color: $chart-axis-text-color;
+
+    path {
+        stroke-width: 2px;
+        stroke: #000;
+    }
+}
