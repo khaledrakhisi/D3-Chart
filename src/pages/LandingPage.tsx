@@ -44,22 +44,24 @@ const LandingPage = () => {
         </aside>
         <section className={classes.actions}>
           <div className={classes.action1}>
-            <Carousel
+            <h2>Investments</h2>
+            <article>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
+              fermentum elit id auctor mollis. Aenean feugiat commodo quam,
+              vulputate viverra lorem iaculis in. Curabitur varius commodo lacus
+              eget vestibulum. Curabitur vitae risus nec justo faucibus
+              vulputate.
+            </article>
+            {/* <Carousel
               slides={[
                 {
-                  caption: <h2>Investments</h2>,
+                  caption: l
                   content: (
-                    <article>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Mauris fermentum elit id auctor mollis. Aenean feugiat
-                      commodo quam, vulputate viverra lorem iaculis in.
-                      Curabitur varius commodo lacus eget vestibulum. Curabitur
-                      vitae risus nec justo faucibus vulputate.
-                    </article>
+                    
                   ),
                 },
               ]}
-            />
+            /> */}
           </div>
           <div className={classes.action2}>
             <Carousel

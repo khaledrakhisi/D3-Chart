@@ -1,9 +1,10 @@
 @use "../scss/abstracts/" as *;
 
 .carousel{
-    @include flex(column, center, flex-start);
+    @include flex(column, flex-start, flex-start);
     width: 100%;
-    height: 100%;    
+    // height: 100%; 
+    flex: 1;
 
     & > blockquote{
         width: 100%;
@@ -14,6 +15,6 @@
         overflow: hidden;        
         color: $text-color;
         text-align: left;
-        padding: $largeSpacing;
+        // padding: $largeSpacing;
     }
 }

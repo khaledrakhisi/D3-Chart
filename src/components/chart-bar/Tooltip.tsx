@@ -5,19 +5,17 @@ import { IUserData } from "../../@types/user";
 import classes from "./Tooltip.module.scss";
 
 interface ITooltipProps {
-  xPos: number;
-  yPos: number;
+  pos: { x: number; y: number };
   bar: IUserData;
 }
 
 export const Tooltip: React.FunctionComponent<ITooltipProps> = ({
-  xPos,
-  yPos,
+  pos,
   bar,
 }) => {
   const position = {
-    x: `${xPos + 20}px`,
-    y: `${yPos}px`,
+    x: `${pos.x + 20}px`,
+    y: `${pos.y}px`,
   };
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { formatDefaultLocale, pointer, scaleBand, scaleLinear } from "d3";
+import { formatDefaultLocale, scaleBand, scaleLinear } from "d3";
 
 import { IUserData } from "../../@types/user";
 
@@ -26,7 +26,7 @@ export const ChartBar: React.FunctionComponent<IBarChartProps> = ({
   axisYMax,
 }) => {
   const [hoveredBar, setHoveredBar] = useState<IUserData | null>(null);
-  const [pos, setPos] = useState([0, 0]);
+  const [pos, setPos] = useState({ x: 0, y: 0 });
 
   const margin = { top: 10, right: 0, bottom: 30, left: 60 };
   const width = 700 - margin.left - margin.right;
@@ -55,15 +55,14 @@ export const ChartBar: React.FunctionComponent<IBarChartProps> = ({
             scaleX={scaleX}
             scaleY={scaleY}
             onMouseOverHandle={(datum, e) => {
-              const rect = e.currentTarget.getBoundingClientRect();
-              setPos([e.pageX, e.pageY]);
+              setPos({ x: e.pageX, y: e.pageY });
               setHoveredBar(datum);
             }}
             onMouseOutHandle={() => setHoveredBar(null)}
           />
         </g>
       </svg>
-      {hoveredBar && <Tooltip bar={hoveredBar} xPos={pos[0]} yPos={pos[1]} />}
+      {hoveredBar && <Tooltip bar={hoveredBar} pos={pos} />}
       {/* <Tooltip bar={data[0]} xPos={pos[0]} yPos={pos[1]} /> */}
     </>
   );
