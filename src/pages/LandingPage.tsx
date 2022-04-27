@@ -56,16 +56,6 @@ const LandingPage = () => {
               eget vestibulum. Curabitur vitae risus nec justo faucibus
               vulputate.
             </article>
-            {/* <Carousel
-              slides={[
-                {
-                  caption: l
-                  content: (
-                    
-                  ),
-                },
-              ]}
-            /> */}
           </div>
           <div className={classes.action2}>
             <Carousel

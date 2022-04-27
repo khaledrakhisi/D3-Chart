@@ -46,7 +46,7 @@ export const Tooltip: React.FunctionComponent<ITooltipProps> = ({
       </div>
       <div className={classes.field}>
         <h3>Growth:</h3>
-        <span>{(bar.product.total * 100) / bar.product.initialInvest}%</span>
+        <span>{bar.product.growth}%</span>
       </div>
     </div>
   );

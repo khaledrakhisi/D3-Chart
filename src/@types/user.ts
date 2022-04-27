@@ -1,7 +1,7 @@
-import { IProduct } from "./product";
+import { Product } from "./product";
 
 export interface IUserData {
-  product: IProduct;
+  product: Product;
   color?: string;
 }
 export interface IUser {
