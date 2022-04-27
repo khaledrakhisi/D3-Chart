@@ -1,6 +1,8 @@
-# Car Finder
+## وَكَانَ فَضْلُ اللَّهِ عَلَيْكَ عَظِيمًا - 113 سورة النساء
 
-A landing page.
+# Love Landing Page
+
+A landing page!
 
 ## Description
 
@@ -16,7 +18,6 @@ Just a lovely landing page with React.js, D3, css
 <a href="https://material-ui.com/" title="D3"><img src="https://github.com/get-icon/geticon/raw/master/icons/d3.svg" alt="D3" width="64px" height="64px"></a>
 <a href="https://git-scm.com/" title="Git"><img src="https://github.com/get-icon/geticon/raw/master/icons/git-icon.svg" alt="Git" width="64px" height="64px"></a>
 <a href="https://yarnpkg.com/" title="Yarn"><img src="https://github.com/get-icon/geticon/raw/master/icons/yarn.svg" alt="Yarn" width="64px" height="64px"></a>
-<a href="https://webpack.js.org/" title="webpack"><img src="https://github.com/get-icon/geticon/raw/master/icons/webpack.svg" alt="webpack" width="64px" height="64px"></a>
 <a href="https://eslint.org/" title="ESLint"><img src="https://github.com/get-icon/geticon/raw/master/icons/eslint.svg" alt="ESLint" width="64px" height="64px"></a>
 <a href="https://prettier.io/" title="Prettier"><img src="https://github.com/get-icon/geticon/raw/master/icons/prettier.svg" alt="Prettier" width="64px" height="64px"></a>
 <a href="https://testing-library.com/docs/react-testing-library/intro/" title="React-Testing-Library"><img src="https://raw.githubusercontent.com/testing-library/react-testing-library/main/other/goat.png" alt="React-Testing-Library" width="64px" height="64px"></a>
@@ -34,9 +35,11 @@ Designed with [Balsamiq.com](https://balsamiq.com)
 
 No live demo
 
-### Demo snapshots
+### Demo photos
 
 ![Demo snapshot #1](./public/demo1.png)
+![Demo snapshot #2](./public/demo2.png)
+![Demo snapshot #3](./public/demo3.png)
 
 ## Styles and Design system
 

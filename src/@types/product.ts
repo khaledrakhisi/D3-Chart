@@ -4,7 +4,6 @@ export interface IProduct {
   initialInvest: number;
   readonly growth: string;
 }
-
 export class Product implements IProduct {
   public name: string;
   public total: number;

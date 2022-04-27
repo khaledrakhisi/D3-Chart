@@ -33,6 +33,10 @@
       @include flex();
       background-color: $dark-bg;
 
+      h1 {
+        font-size: 28px;
+      }
+
       .carousel {
         max-width: 760px;
       }
