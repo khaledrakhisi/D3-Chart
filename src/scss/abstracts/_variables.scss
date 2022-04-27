@@ -1,35 +1,37 @@
- /* Color Palette */
- $primaryColor: #EF233C;
- $secondaryColor: #222222;
+/* Color Palette */
+$primaryColor: #ef233c;
+$secondaryColor: #222222;
 
- $bg: $primaryColor 0% 0% no-repeat padding-box;
- $card-bgc: #f0f0f3;
- $dark-bg: #0d455d;
- $text-color: #fff;
- $chart-axis-text-color: #777777;
- $chart-alt-text-color: #076283;
+$bg: $primaryColor 0% 0% no-repeat padding-box;
+$card-bgc: #f0f0f3;
+$dark-bg: #0d455d;
+$text-color: #fff;
+$chart-axis-text-color: #777777;
+$chart-alt-text-color: #076283;
+$chart-line-color: #000;
 
- /* ****Font family**** */
- $fontFamily: "Roboto", Arial, Helvetica, sans-serif;
+/* ****Font family**** */
+$fontFamily: "Roboto", Arial, Helvetica, sans-serif;
 
 //Body font sizes
-$fontSizeBodySmall: 12px; 
+$fontSizeBodySmall: 12px;
 $lineHeightBodySmall: 16px;
+$fontSizeNormal: 14px;
 $fontSizeBodyMedium: 16px;
 $lineHeightBodyMedium: 24px;
 $fontSizeBodyLarge: 35px;
 $lineHeightBodyLarge: 35px;
 //Headline font sizes
-$fontSizeHeadlineSmall: 12px; 
-$fontSizeHeadlineMedium: 25px; 
+$fontSizeHeadlineSmall: 12px;
+$fontSizeHeadlineMedium: 25px;
 $fontSizeHeadlineLarge: 37px;
 //Display font sizes
-$fontSizeDisplaySmall: 64px; 
+$fontSizeDisplaySmall: 64px;
 //helper font sizes
-$fontSizeTableStatus: 9px; 
+$fontSizeTableStatus: 9px;
 
 /* ****Shadows**** */
-$mainBoxShadow: 0 1px 3px 0 rgba(37,39,49,.1);
+$mainBoxShadow: 0 1px 3px 0 rgba(37, 39, 49, 0.1);
 $secondBoxShadow: 0px 2px 2px #00000029;
 
 /* ****Border radius**** */

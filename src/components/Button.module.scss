@@ -1,19 +1,19 @@
 @use "../scss/abstracts/" as *;
 
-.custombutton{
-    width: 100%;
-    height: 52px;
-    color: $text-color;
-    background: $bg;
-    border-radius: 0 0 0 $mediumBorderRadius;
-    border: none;
-    cursor: pointer;
-    @include trans(all ease 500ms);
+.custombutton {
+  width: 100%;
+  height: 52px;
+  color: $text-color;
+  background: $bg;
+  border-radius: 0 0 0 $mediumBorderRadius;
+  border: none;
+  cursor: pointer;
+  @include trans(all ease 500ms);
 
-    &:hover{
-        background-color: lighten($primaryColor, 5);
-    }
-    &:active{
-        background-color: darken($primaryColor, 5);
-    }
+  &:hover {
+    background-color: lighten($primaryColor, 5);
+  }
+  &:active {
+    background-color: darken($primaryColor, 5);
+  }
 }

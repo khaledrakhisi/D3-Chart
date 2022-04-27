@@ -1,17 +1,13 @@
 @use "../../scss//abstracts/" as *;
 
 .leftaxis {
-    font-size: 14px;
-    color: $chart-axis-text-color;
+  font-size: 14px;
+  color: $chart-axis-text-color;
 
-    path {
-        stroke-width: 2px;
-        stroke: #000;
-    }
-
-    & > g {
-        & > .tick {
-            stroke-width: 2px;
-        }
-    }
+  path {
+    stroke: $chart-line-color;
+  }
+  line {
+    stroke: $chart-line-color;
+  }
 }

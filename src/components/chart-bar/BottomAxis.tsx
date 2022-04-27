@@ -12,7 +12,9 @@ export function AxisBottom({ scale, transform }: AxisBottomProps) {
 
   useEffect(() => {
     if (ref.current) {
-      select(ref.current).call(axisBottom(scale).tickSizeInner(12));
+      select(ref.current).call(
+        axisBottom(scale).tickSizeInner(15).tickPadding(8)
+      );
     }
   }, [scale]);
 

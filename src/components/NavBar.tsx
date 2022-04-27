@@ -29,11 +29,9 @@ const NavBar: React.FunctionComponent = () => {
 
   return (
     <>
-      {isContextMenuExpanded && (
-        <Backdrop onClickHandle={h}>
-          <Menu />
-        </Backdrop>
-      )}
+      <Backdrop onClickHandle={h} visible={isContextMenuExpanded}>
+        <Menu />
+      </Backdrop>
       <nav className={classes.navBar}>
         {/* In this section when ever the user is loggedin, her/his Avatar and a greeting message will be shown,
         otherwise just a LOGO will be shown instead.

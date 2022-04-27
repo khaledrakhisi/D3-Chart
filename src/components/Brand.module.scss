@@ -1,12 +1,12 @@
 @use "../scss/abstracts/" as *;
 
-.brand{
-    margin: $extraLargeSpacing;
-    .icon{        
-        fill:$primaryColor;
-    
-        &.inversed{
-            fill: $text-color;
-        }
+.brand {
+  margin: $extraLargeSpacing;
+  .icon {
+    fill: $primaryColor;
+
+    &.inversed {
+      fill: $text-color;
     }
+  }
 }

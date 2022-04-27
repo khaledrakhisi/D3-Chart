@@ -1,11 +1,10 @@
 @use "../../scss/abstracts/" as *;
 
 .bar {
-    text-anchor: middle;
-    font: normal normal normal 14px $fontFamily;
-    color: $secondaryColor;
+  text-anchor: middle;
+  font: normal normal normal 14px $fontFamily;
+  color: $secondaryColor;
 
-    &:hover{
-        
-    }    
+  &:hover {
+  }
 }

@@ -7,7 +7,7 @@ export const liqidUser: IUser = {
   avatar: "/src/assets/images/Group 1.svg",
   data: [
     {
-      product: new Product("LIQID Cash", 100, 50),
+      product: new Product("LIQID Cash", 920, 8),
       color: "#C9B7C5",
     },
     {

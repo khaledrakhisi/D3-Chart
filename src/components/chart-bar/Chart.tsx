@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { formatDefaultLocale, scaleBand, scaleLinear } from "d3";
+import { scaleBand, scaleLinear } from "d3";
 
 import { IUserData } from "../../@types/user";
 
@@ -9,13 +9,6 @@ import { AxisLeft } from "./LeftAxis";
 import { Tooltip } from "./Tooltip";
 
 import classes from "./Chart.module.scss";
-
-formatDefaultLocale({
-  decimal: ".",
-  thousands: ",",
-  grouping: [3],
-  currency: ["", "€"],
-});
 
 export interface IChartProps {
   data: Array<IUserData>;

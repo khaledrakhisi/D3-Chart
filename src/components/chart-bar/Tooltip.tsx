@@ -28,7 +28,8 @@ export const Tooltip: React.FunctionComponent<ITooltipProps> = ({
   };
 
   return (
-    <div
+    <section
+      data-testid="tooltip"
       className={classes.tooltip}
       style={{
         left: position.x,
@@ -48,6 +49,6 @@ export const Tooltip: React.FunctionComponent<ITooltipProps> = ({
         <h3>Growth:</h3>
         <span>{bar.product.growth}%</span>
       </div>
-    </div>
+    </section>
   );
 };

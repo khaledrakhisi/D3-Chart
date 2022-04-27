@@ -9,37 +9,40 @@
   cursor: pointer;
   z-index: 3;
 
-  .first, .second, .third{
+  .first,
+  .second,
+  .third {
     @include trans(all ease-in-out 300ms);
     display: block;
     position: relative;
     height: 2px;
-    background-color: $primaryColor;    
-  }  
+    background-color: $primaryColor;
+  }
 
   .first,
-  .third{
+  .third {
     width: 100%;
   }
   .second {
     width: 90%;
   }
-  
-  &.open{
-    .first, .third{
+
+  &.open {
+    .first,
+    .third {
       transform-origin: 3%;
       background-color: $text-color;
     }
-    .first{     
-        transform: rotate(45deg);      
+    .first {
+      transform: rotate(45deg);
     }
-    .second{
+    .second {
       transform: translateX(10px);
       background: transparent;
       box-shadow: none;
     }
-    .third{      
-        transform: rotate(-45deg);      
+    .third {
+      transform: rotate(-45deg);
     }
   }
 }

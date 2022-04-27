@@ -31,15 +31,15 @@ select {
   font: inherit;
 }
 
-h1{  
+h1 {
   font: italic normal 300 $fontSizeHeadlineLarge $fontFamily;
   line-height: $lineHeightBodyLarge;
 }
-h2{  
+h2 {
   font: italic normal 300 $fontSizeHeadlineMedium $fontFamily;
   line-height: $lineHeightBodyLarge;
 }
-h3{
+h3 {
   font: normal normal medium $fontSizeHeadlineSmall $fontFamily;
   line-height: $lineHeightBodySmall;
 }
@@ -48,7 +48,7 @@ h3{
 body {
   /* Add some padding on document's body to prevent the content
     to go underneath the header */
-  padding-top: $mainHeaderSize; 
+  padding-top: $mainHeaderSize;
 
   background-color: $bg;
   color: $text-color;
@@ -60,15 +60,21 @@ body {
 
 //$-------- scrollbar styles
 ::-webkit-scrollbar {
-  // width: 0.5rem;
   display: none;
+
+  @include tablet {
+    display: unset;
+    width: 0.5rem;
+  }
+}
+::-webkit-scrollbar {
 }
 
 ::-webkit-scrollbar-track {
-  background: $bg;
+  background: $secondaryColor;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
   border-radius: 100vw;
 }

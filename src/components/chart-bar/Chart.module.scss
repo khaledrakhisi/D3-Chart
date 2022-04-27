@@ -1,11 +1,11 @@
 @use "../../scss/abstracts/" as *;
 
-.barchart { 
-    width: 745px;
-    height: 355px;
+.barchart {
+  width: 745px;
+  height: 355px;
 
-    @include tablet{
-      width: 700px;
-      height: 355px
-    }
+  @include tablet {
+    width: 700px;
+    height: 355px;
+  }
 }

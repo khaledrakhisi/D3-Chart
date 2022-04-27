@@ -1,54 +1,54 @@
 @use "../scss/abstracts/" as *;
 
 .navBar {
-    color: $text-color;
+  color: $text-color;
 
-    .userinfo {
-        @include flex();
-        position: relative;
-        font-style: italic;
+  .userinfo {
+    @include flex();
+    position: relative;
+    font-style: italic;
 
-        & > span{
-            margin-left: $mediumSpacing;
-        }
-        .link{            
-            &:hover{
-                text-decoration: underline;
-            }
-        }
+    & > span {
+      margin-left: $mediumSpacing;
     }
-
-    .divider{
-        display: none;
-        @include tablet {
-            display: block;
-            margin-left: $mediumSpacing;
-            border-left: 1px solid $text-color;
-            width: 1px;
-            height: 20px;
-        }
+    .link {
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
 
-    .topmenu{
-        display: none;
-        @include tablet {
-            display: block;
-            width: 100%;            
-        }
+  .divider {
+    display: none;
+    @include tablet {
+      display: block;
+      margin-left: $mediumSpacing;
+      border-left: 1px solid $text-color;
+      width: 1px;
+      height: 20px;
     }
+  }
 
-    @include tablet {        
-        @include flex();
-        width: 100%;
+  .topmenu {
+    display: none;
+    @include tablet {
+      display: block;
+      width: 100%;
     }
+  }
+
+  @include tablet {
+    @include flex();
+    width: 100%;
+  }
 }
 
 .hamburger {
-    position: absolute;
-    top: $extraLargeSpacing;
-    right: $extraLargeSpacing;
+  position: absolute;
+  top: $extraLargeSpacing;
+  right: $extraLargeSpacing;
 
-    @include tablet {
-        display: none;
-    }
+  @include tablet {
+    display: none;
+  }
 }

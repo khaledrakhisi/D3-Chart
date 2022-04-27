@@ -9,6 +9,8 @@ export class Product implements IProduct {
   public name: string;
   public total: number;
   public initialInvest: number;
+
+  //Computed field using typescript
   get growth(): string {
     return ((this.initialInvest / this.total) * 100).toFixed(2);
   }

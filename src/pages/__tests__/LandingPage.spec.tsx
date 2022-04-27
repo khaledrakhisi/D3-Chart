@@ -1,12 +1,6 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import {
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-  within,
-} from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 
 import { IUser } from "../../@types/user";
 import { UserContext } from "../../context/user-context";
@@ -38,6 +32,7 @@ describe("Landing page appearance", () => {
   beforeEach(() => {
     render(<MockLandingPage user={liqidUser} />);
   });
+  afterEach(cleanup);
   it("Should render 'Chart Left Axis' in the page as expected.", async () => {
     expect(screen.getByText(/100€/i)).toBeInTheDocument();
     expect(screen.getByText(/200€/i)).toBeInTheDocument();
@@ -67,35 +62,7 @@ describe("Landing page appearance", () => {
     expect(screen.getByText(/LIQID Venture/i)).toBeInTheDocument();
   });
 
-  xit("should render 'Showing 10 of 100 results' in the page", async () => {
-    await waitFor(() => {
-      const element = screen.getByText(/showing 10 of 1000 results/i);
-
-      expect(element).toBeInTheDocument();
-    });
+  xit("Should not render '0€' in the page", async () => {
+    expect(screen.getByText(/0€/gm)).toBeInTheDocument();
   });
-
-  //   xit("should display car details when clicking the generate button", async () => {
-  //     const mockResponse = {
-  //       data: response,
-  //       status: 200,
-  //       statusText: "ok",
-  //       headers: {},
-  //       config: {},
-  //     };
-  //     mockedAxios.get.mockResolvedValue(mockResponse);
-  //     const { getAllByText, queryByText } = render(<MockSearchPage />);
-
-  //     expect(queryByText(/audi s6/i)).not.toBeInTheDocument();
-
-  //     fireEvent.click(getAllByText(/filter/i)[0]);
-
-  //     expect(queryByText(/Loading.../)).toBeInTheDocument();
-  //     await waitFor(() => {
-  //       const list = screen.getByRole("list");
-  //       const { getAllByRole } = within(list);
-  //       const items = getAllByRole("listitem");
-  //       expect(items.length).toBeGreaterThan(0);
-  //     });
-  //   });
 });

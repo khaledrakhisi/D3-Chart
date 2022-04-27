@@ -16,104 +16,104 @@
   width: 100vw;
   min-height: 100vh;
 
-  h1, h2{
+  h1,
+  h2 {
     margin: $extraLargeSpacing $extraLargeSpacing 0;
     padding: $extraSmallSpacing $largeSpacing;
-    @include actionHeading($text-color)
+    @include actionHeading($text-color);
   }
 
-    .top{
-        @include flex(column);
-        width: 100vw;
-        flex: 1;
+  .top {
+    @include flex(column);
+    width: 100vw;
+    flex: 1;
 
-        .info {
-            width: 100%;            
-            @include flex();
-            background-color: $dark-bg;
+    .info {
+      width: 100%;
+      @include flex();
+      background-color: $dark-bg;
 
-            .carousel{
-                max-width: 760px;
-            }
+      .carousel {
+        max-width: 760px;
+      }
 
-            article {              
-              margin: $extraLargeSpacing $extraLargeSpacing;
-            }            
-          }
-        
-          .actions {
-            @include flex(column);
-            width: 100%;
-            padding: $extraLargeSpacing;                                
-        
-            .action1 {
-              background-color: $card-bgc;
-              margin: 0 0 $largeSpacing 0;
-            
-              & > h2{
-                @include actionHeading($primaryColor);
-              }
-              & > article{
-                color: $secondaryColor;
-                margin: $extraLargeSpacing $extraLargeSpacing;
-                @include overflowEllipses(7);
-              }
-        
-              @include tablet{                
-                @include actionBoxSize();
-                border-radius: 0 0 0 $largeBorderRadius;
-                margin: 0 $largeSpacing 0 0;
-              }
-            }
-        
-            .action2 {
-              background-color: $card-bgc;
-              border-radius: 0 0 0 $largeBorderRadius;
-              @include flex(column, flex-start);
-              h2{
-                @include actionHeading($primaryColor);
-              }
-              section{
-                @include flex(column, flex-start);                
-                margin: $extraLargeSpacing $extraLargeSpacing;
-                flex: 1;
-
-                & > article {
-                  color: $secondaryColor;
-                  @include flex(column, flex-start);
-                  flex: 1;
-
-                  & > :first-child {
-                    flex: 1;  
-                  }                  
-
-                  & > :last-child{
-                    margin-top: 35px;
-                  
-                    @include tablet {
-                      margin-top: auto;
-                    }
-                  }
-                }
-              }                
-        
-              @include tablet{
-                @include actionBoxSize();
-                border-radius: 0;             
-              }
-            }
-        
-            @include tablet{              
-              @include flex();
-              overflow: hidden;      
-            }
-          }
-          
-          @include tablet{            
-            @include flex(row, center, stretch);
-          }
+      article {
+        margin: $extraLargeSpacing $extraLargeSpacing;
+      }
     }
 
+    .actions {
+      @include flex(column);
+      width: 100%;
+      padding: $extraLargeSpacing;
+
+      .action1 {
+        background-color: $card-bgc;
+        margin: 0 0 $largeSpacing 0;
+
+        & > h2 {
+          @include actionHeading($primaryColor);
+        }
+        & > article {
+          color: $secondaryColor;
+          margin: $extraLargeSpacing $extraLargeSpacing;
+          @include overflowEllipses(7);
+        }
+
+        @include tablet {
+          @include actionBoxSize();
+          border-radius: 0 0 0 $largeBorderRadius;
+          margin: 0 $largeSpacing 0 0;
+        }
+      }
+
+      .action2 {
+        background-color: $card-bgc;
+        border-radius: 0 0 0 $largeBorderRadius;
+        @include flex(column, flex-start);
+        h2 {
+          @include actionHeading($primaryColor);
+        }
+        section {
+          @include flex(column, flex-start);
+          margin: $extraLargeSpacing $extraLargeSpacing;
+          flex: 1;
+
+          & > article {
+            color: $secondaryColor;
+            @include flex(column, flex-start);
+            flex: 1;
+
+            & > :first-child {
+              flex: 1;
+            }
+
+            & > :last-child {
+              margin-top: 35px;
+
+              @include tablet {
+                margin-top: auto;
+              }
+            }
+          }
+        }
+
+        @include tablet {
+          @include actionBoxSize();
+          border-radius: 0;
+        }
+      }
+
+      @include tablet {
+        @include flex();
+        overflow: hidden;
+      }
+    }
+
+    @include tablet {
+      @include flex(row, center, stretch);
+    }
+  }
 
   .bottom {
     flex: 1;
@@ -121,31 +121,30 @@
     background-color: $card-bgc;
     padding-top: $largeSpacing;
     padding-bottom: 50px;
-    width: 100vw;  
+    width: 100vw;
 
-    .charttile{
-        h1{
-          @include actionHeading($primaryColor);
-        }
+    .charttile {
+      h1 {
+        @include actionHeading($primaryColor);
+      }
 
-        @include tablet{
-          @include flex();
-        }
-    }      
-    .chartitself {        
-        color: $secondaryColor;
-        padding: $largeSpacing;
-        width: 100%;
-        overflow-x: scroll;
-        scroll-behavior: smooth;
-        @include tablet {
-          @include flex();
-        }
-    }    
-    
+      @include tablet {
+        @include flex();
+      }
+    }
+    .chartitself {
+      color: $secondaryColor;
+      padding: $largeSpacing;
+      width: 100%;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      @include tablet {
+        @include flex();
+      }
+    }
+
     @include tablet {
       @include flex(column);
     }
   }
-
 }

@@ -1,37 +1,36 @@
 @use "../scss/abstracts/" as *;
 
-.login{   
-    @include flex();
-    width: 100%;
-    min-height: calc(100vh - $mainHeaderSize);
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: $card-bgc;
+.login {
+  @include flex();
+  width: 100%;
+  min-height: calc(100vh - $mainHeaderSize);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $card-bgc;
 
-    & > form{        
-        @include flex(column);
-        width: 280px;
-        height: 450px;
-        padding: $largeSpacing;
-        background-color: $text-color;
-        box-shadow: $mainBoxShadow;
-        margin-top: 7.5px;
-        margin-bottom: 7.5px;
+  & > form {
+    @include flex(column);
+    width: 280px;
+    height: 450px;
+    padding: $largeSpacing;
+    background-color: $text-color;
+    box-shadow: $mainBoxShadow;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
 
-        & > h3{            
-            font-size: $fontSizeHeadlineSmall;
-            margin: $mediumSpacing 0;
-            font-weight: 400;
-            color: $secondaryColor;
-        }
-        & > p{
-            text-align: left;
-            color: $secondaryColor
-        }
-
-        & > :last-child{
-            margin-top: auto;
-        }
+    & > h3 {
+      font-size: $fontSizeHeadlineSmall;
+      margin: $mediumSpacing 0;
+      font-weight: 400;
+      color: $secondaryColor;
     }
-}
+    & > p {
+      text-align: left;
+      color: $secondaryColor;
+    }
 
+    & > :last-child {
+      margin-top: auto;
+    }
+  }
+}

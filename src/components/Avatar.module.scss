@@ -1,21 +1,21 @@
 @use "../scss/abstracts/" as *;
 
-.avatar{
-    @include flex();
-    overflow: hidden;
-    position: relative;
-    width: 53px;
-    height: 53px;
-    background: $bg;
-    border-radius: 100%;
+.avatar {
+  @include flex();
+  overflow: hidden;
+  position: relative;
+  width: 53px;
+  height: 53px;
+  background: $bg;
+  border-radius: 100%;
 
-    .icon{
-        &.inversed{
-            fill: $primaryColor
-        }
+  .icon {
+    &.inversed {
+      fill: $primaryColor;
     }
+  }
 
-    &.inversed{
-        background-color: $secondaryColor;
-    }
+  &.inversed {
+    background-color: $secondaryColor;
+  }
 }

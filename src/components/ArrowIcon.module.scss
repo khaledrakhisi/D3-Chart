@@ -1,11 +1,10 @@
 @use "../scss/abstracts/" as *;
 
 .arrow {
-    width: 100%;
+  width: 100%;
+  @include trans(all ease 300ms);
 
-    transition: all ease 300ms;
-  
-    @include tablet {
-      display: none;
-    }
+  @include tablet {
+    display: none;
   }
+}

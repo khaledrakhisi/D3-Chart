@@ -1,11 +1,11 @@
 @use "../scss/abstracts/" as *;
 
-header{        
-    @include flex(row, unset, center);
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: $mainHeaderSize;
-    padding: $mediumSpacing $largeSpacing;
-    background-color: $secondaryColor;
+header {
+  @include flex(row, unset, center);
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: $mainHeaderSize;
+  padding: $mediumSpacing $largeSpacing;
+  background-color: $secondaryColor;
 }

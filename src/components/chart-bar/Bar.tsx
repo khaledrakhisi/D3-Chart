@@ -45,6 +45,7 @@ export function Bars({
             </text>
             <rect
               className={classes.bar}
+              data-testid="bar"
               x={
                 scaleX(datum.product.name)! + scaleX.bandwidth() / 2 - width / 2
               }
