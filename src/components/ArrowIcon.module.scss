@@ -2,8 +2,6 @@
 
 .arrow {
   width: 100%;
-  position: relative;
-  z-index: 1;
   @include trans(all ease 300ms);
 
   @include tablet {

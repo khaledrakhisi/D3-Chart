@@ -140,10 +140,11 @@
       color: $secondaryColor;
       padding: $largeSpacing;
       width: 100%;
-      overflow-x: hidden;
+      overflow-x: scroll;
       scroll-behavior: smooth;
       @include tablet {
         @include flex();
+        overflow-x: hidden;
       }
     }
 

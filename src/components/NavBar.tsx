@@ -12,7 +12,7 @@ import { Menu } from "./Menu";
 
 import classes from "./NavBar.module.scss";
 
-const NavBar: React.FunctionComponent = () => {
+const NavBar = () => {
   const backdropClickHandle = () => {
     openContextMenu(false);
   };

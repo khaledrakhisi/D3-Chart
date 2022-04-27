@@ -31,7 +31,9 @@ const slides: Array<TCarouselSlide> = [
 ];
 
 const LandingPage = () => {
-  const { loggedinUser } = useContext(UserContext) as TUserContext;
+  const { loggedinUser, contextMenuState } = useContext(
+    UserContext
+  ) as TUserContext;
   const chartRef = useRef<HTMLDivElement | null>(null);
 
   const arrowClickHandle = (dir: EArrowDirection) => {
@@ -84,7 +86,7 @@ const LandingPage = () => {
         <div className={classes.chartitself} ref={chartRef}>
           <Chart data={loggedinUser.data} axisYMax={1000} />
         </div>
-        <ArrowIcon onClick={arrowClickHandle} />
+        {!contextMenuState && <ArrowIcon onClick={arrowClickHandle} />}
       </section>
     </main>
   );
