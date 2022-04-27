@@ -26,18 +26,17 @@
   }
 }
 
-@mixin fadeInSlide {
-  animation: fadeInSlideAnimation ease 400ms;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+@mixin animate($animation, $duration: 400ms, $method: ease, $times: 1){
+  animation: $animation $duration $method $times;
 }
 
-@keyframes fadeInSlideAnimation {
-  0%{
-      opacity: 0;
-      transform: translateX(-300px);
+@mixin keyframes($name){
+  @keyframes #{$name}{
+      @content;
   }
-  100%{
-      opacity: 1;
-  }
+}
+
+@mixin trans($str) {
+  transition: #{$str};
+  -webkit-transition: #{$str};
 }

@@ -8,6 +8,7 @@
     border-radius: 0 0 0 $mediumBorderRadius;
     border: none;
     cursor: pointer;
+    @include trans(all ease 500ms);
 
     &:hover{
         background-color: lighten($primaryColor, 5);

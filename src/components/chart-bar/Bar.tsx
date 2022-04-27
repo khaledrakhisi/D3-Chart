@@ -3,13 +3,13 @@ import React from "react";
 import { IUserData } from "../../@types/user";
 
 import { AxisBottomProps } from "./BottomAxis";
-import { IBarChartProps } from "./Chart";
+import { IChartProps } from "./Chart";
 import { AxisLeftProps } from "./LeftAxis";
 
 import classes from "./Bar.module.scss";
 
 export interface BarsProps {
-  data: IBarChartProps["data"];
+  data: IChartProps["data"];
   width: number;
   height: number;
   scaleX: AxisBottomProps["scale"];

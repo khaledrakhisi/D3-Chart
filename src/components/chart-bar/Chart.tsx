@@ -17,11 +17,11 @@ formatDefaultLocale({
   currency: ["", "€"],
 });
 
-export interface IBarChartProps {
+export interface IChartProps {
   data: Array<IUserData>;
   axisYMax?: number;
 }
-export const Chart: React.FunctionComponent<IBarChartProps> = ({
+export const Chart: React.FunctionComponent<IChartProps> = ({
   data,
   axisYMax,
 }) => {
@@ -62,8 +62,7 @@ export const Chart: React.FunctionComponent<IBarChartProps> = ({
           />
         </g>
       </svg>
-      {hoveredBar && <Tooltip bar={hoveredBar} pos={pos} />}
-      {/* <Tooltip bar={data[0]} xPos={pos[0]} yPos={pos[1]} /> */}
+      {hoveredBar && <Tooltip bar={hoveredBar} pos={pos} width={150} />}
     </>
   );
 };

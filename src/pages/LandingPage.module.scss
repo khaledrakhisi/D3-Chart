@@ -141,17 +141,7 @@
         @include tablet {
           @include flex();
         }
-    }      
-
-    .arrow {
-      width: 100%;
-
-      transition: all ease 400ms;
-    
-      @include tablet {
-        display: none;
-      }
-    }
+    }    
     
     @include tablet {
       @include flex(column);

@@ -3,6 +3,7 @@
 menu {
     .menuitem {
         @include flex();
+        @include trans(all ease 200ms);
         margin: $extraLargeSpacing $smallSpacing;
 
         .icon {

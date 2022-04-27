@@ -4,24 +4,37 @@ import { IUserData } from "../../@types/user";
 
 import classes from "./Tooltip.module.scss";
 
+export interface IPosition {
+  x: number;
+  y: number;
+}
+
 interface ITooltipProps {
-  pos: { x: number; y: number };
+  pos: IPosition;
+  width: number;
   bar: IUserData;
 }
 
 export const Tooltip: React.FunctionComponent<ITooltipProps> = ({
-  pos,
   bar,
+  pos,
+  width,
 }) => {
   const position = {
-    x: `${pos.x + 20}px`,
-    y: `${pos.y}px`,
+    x: `${
+      pos.x + width > window.outerWidth ? pos.x - width - 10 : pos.x + 20
+    }px`,
+    y: `${pos.y + 72 > window.outerHeight ? pos.y - 80 : pos.y}px`,
   };
 
   return (
     <div
       className={classes.tooltip}
-      style={{ left: position.x, top: position.y }}
+      style={{
+        left: position.x,
+        top: position.y,
+        width: width,
+      }}
     >
       <div className={classes.field}>
         <h3>Total:</h3>

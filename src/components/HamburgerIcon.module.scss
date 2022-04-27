@@ -10,20 +10,19 @@
   z-index: 3;
 
   .first, .second, .third{
+    @include trans(all ease-in-out 300ms);
     display: block;
     position: relative;
     height: 2px;
-    background-color: $primaryColor;
+    background-color: $primaryColor;    
   }  
 
   .first,
   .third{
     width: 100%;
-    transition: all .3s ease-in-out;
   }
   .second {
     width: 90%;
-    transition: all .5s ease-in-out;
   }
   
   &.open{
