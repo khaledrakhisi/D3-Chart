@@ -14,16 +14,16 @@
       "cypress/globals": true
     },
     "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": false,
-          "endOfLine": "auto",
-          "trailingComma": "es5",
-          "tabSize": 2,
-          "semi": true
-        }
-      ],
+      // "prettier/prettier": [
+      //   "error",
+      //   {
+      //     "singleQuote": false,
+      //     "endOfLine": "auto",
+      //     "trailingComma": "es5",
+      //     "tabSize": 2,
+      //     "semi": true
+      //   }
+      // ],
       "no-unused-vars": "off",
       "max-len": "off",
       "prefer-template": "off",
