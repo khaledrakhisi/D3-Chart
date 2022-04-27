@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
 import { TUserContext } from "../@types/user";
@@ -13,23 +13,17 @@ import { Menu } from "./Menu";
 import classes from "./NavBar.module.scss";
 
 const NavBar: React.FunctionComponent = () => {
-  const [isContextMenuExpanded, setIsContextMenuExpanded] =
-    useState<boolean>(false);
-
-  const HamburgerIconClickHandler = (isExpanded: boolean) => {
-    setIsContextMenuExpanded(isExpanded);
+  const backdropClickHandle = () => {
+    openContextMenu(false);
   };
 
-  const h = () => {
-    setIsContextMenuExpanded(false);
-    // console.log("jkhkjhkjh");
-  };
-
-  const { loggedinUser } = useContext(UserContext) as TUserContext;
+  const { loggedinUser, contextMenuState, openContextMenu } = useContext(
+    UserContext
+  ) as TUserContext;
 
   return (
     <>
-      <Backdrop onClickHandle={h} visible={isContextMenuExpanded}>
+      <Backdrop onClickHandle={backdropClickHandle} visible={contextMenuState}>
         <Menu />
       </Backdrop>
       <nav className={classes.navBar}>
@@ -39,7 +33,7 @@ const NavBar: React.FunctionComponent = () => {
         {loggedinUser ? (
           <div className={classes.userinfo}>
             <NavLink to="/profile">
-              <Avatar isInversed={isContextMenuExpanded} />
+              <Avatar isInversed={contextMenuState} />
             </NavLink>
             <span>Hallo,&nbsp;</span>
             <NavLink className={classes.link} to="/profile">
@@ -55,7 +49,7 @@ const NavBar: React.FunctionComponent = () => {
           <Menu />
         </section>
         <div className={classes.hamburger}>
-          <HamburgerIcon onClick={HamburgerIconClickHandler} />
+          <HamburgerIcon />
         </div>
       </nav>
     </>

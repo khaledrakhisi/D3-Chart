@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { CSSTransition } from "react-transition-group";
 
 import { Brand } from "./Brand";
 
@@ -29,10 +30,18 @@ export const Backdrop: React.FunctionComponent<IBackdropProps> = ({
       window.scrollTo(0, parseInt(scrollY || "0") * -1);
     }
   }, [visible]);
-  return visible ? (
-    <aside className={classes.backdrop} onClick={(e) => onClickHandle}>
-      {children}
-      <Brand isInversed />
-    </aside>
-  ) : null;
+  return (
+    <CSSTransition
+      in={visible}
+      timeout={200}
+      classNames="slide-in-left"
+      mountOnEnter
+      unmountOnExit
+    >
+      <aside className={classes.backdrop} onClick={(e) => onClickHandle(e)}>
+        {children}
+        <Brand isInversed />
+      </aside>
+    </CSSTransition>
+  );
 };

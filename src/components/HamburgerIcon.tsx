@@ -1,28 +1,22 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+
+import { TUserContext } from "../@types/user";
+import { UserContext } from "../context/user-context";
 
 import classes from "./HamburgerIcon.module.scss";
 
-interface IHamburgerMenuProps {
-  onClick: (isExpanded: boolean) => void;
-}
-
-export const HamburgerIcon: React.FunctionComponent<IHamburgerMenuProps> = ({
-  onClick,
-}) => {
-  const [isContextMenuExpanded, setIsContextMenuExpanded] =
-    useState<boolean>(false);
-  const contextMenuButtonClickHandle = (e: React.MouseEvent) => {
-    setIsContextMenuExpanded(!isContextMenuExpanded);
-    onClick(!isContextMenuExpanded);
-  };
+export const HamburgerIcon = () => {
+  const { contextMenuState, openContextMenu } = useContext(
+    UserContext
+  ) as TUserContext;
 
   return (
     <>
       <button
         className={`${classes.hamburgericon} ${
-          isContextMenuExpanded && classes.open
+          contextMenuState && classes.open
         }`}
-        onClick={(e) => contextMenuButtonClickHandle(e)}
+        onClick={() => openContextMenu(!contextMenuState)}
       >
         <span className={classes.first} />
         <span className={classes.second} />

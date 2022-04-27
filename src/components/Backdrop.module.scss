@@ -10,17 +10,6 @@
   color: $text-color;
   padding-top: 142px;
 
-  @include keyframes(fade) {
-    0% {
-      transform: translateX(-300px);
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @include animate(fade, 500ms);
-
   // Brand LOGO moves at the very bottom
   & > :last-child {
     margin-top: auto;

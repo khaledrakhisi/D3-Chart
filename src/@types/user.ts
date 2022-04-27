@@ -14,4 +14,6 @@ export type TUserContext = {
   loggedinUser: IUser;
   login: (user: IUser) => void;
   logoff: () => void;
+  contextMenuState: boolean;
+  openContextMenu: (state: boolean) => void;
 };

@@ -12,6 +12,8 @@ const AuthProvider: React.FunctionComponent<IAuthProviderProps> = ({
   children,
 }) => {
   const [user, setUser] = React.useState<IUser | null>(liqidUser);
+  const [contextMenuStatus, setContextMenuStatus] =
+    React.useState<boolean>(false);
   return (
     <UserContext.Provider
       value={{
@@ -20,6 +22,8 @@ const AuthProvider: React.FunctionComponent<IAuthProviderProps> = ({
         logoff: () => {
           setUser(null);
         },
+        contextMenuState: contextMenuStatus,
+        openContextMenu: setContextMenuStatus,
       }}
     >
       {children}
