@@ -18,8 +18,10 @@ const MockLandingPage: React.FunctionComponent<IMockLandingPageProps> = ({
       <UserContext.Provider
         value={{
           loggedinUser: user!,
-          login: () => {},
-          logoff: () => {},
+          login: jest.fn(),
+          logoff: jest.fn(),
+          contextMenuState: false,
+          openContextMenu: jest.fn(),
         }}
       >
         <LandingPage />
@@ -62,7 +64,7 @@ describe("Landing page appearance", () => {
     expect(screen.getByText(/LIQID Venture/i)).toBeInTheDocument();
   });
 
-  xit("Should not render '0€' in the page", async () => {
-    expect(screen.getByText(/0€/gm)).toBeInTheDocument();
+  it("Should not render '0€' in the page as expected", async () => {
+    expect(screen.queryByText("0€")).toBeFalsy();
   });
 });

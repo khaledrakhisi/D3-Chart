@@ -18,7 +18,7 @@ export const Menu = () => {
     logoff();
   };
   return (
-    <menu>
+    <menu data-testid="menu">
       {loggedinUser && (
         <NavLink
           className={`${classes.menuitem}`}
