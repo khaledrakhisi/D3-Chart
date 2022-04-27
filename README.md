@@ -43,15 +43,7 @@ No live demo
 
 ## Styles and Design system
 
-No design system except scss preprocessor.
-
-### Components tree & State map
-
-```
-App
-|
-
-```
+Just SASS (Mobile-First approach).
 
 ### Installing Dependencies
 
