@@ -1,4 +1,4 @@
-export interface IProduct {
+interface IProduct {
   name: string;
   total: number;
   initialInvest: number;

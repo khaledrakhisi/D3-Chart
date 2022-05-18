@@ -20,10 +20,12 @@ export const ArrowIcon: React.FunctionComponent<IArrowIconProps> = ({
     <Arrow
       className={`${classes.arrow}`}
       style={{
-        transform: `rotate(${arrowDirection === -1 ? -180 : 0}deg)`,
+        transform: `rotate(${
+          arrowDirection === EArrowDirection.toLeft ? -180 : 0
+        }deg)`,
       }}
       onClick={() => {
-        setArrowDirection(arrowDirection === -1 ? 1 : -1);
+        setArrowDirection(arrowDirection === EArrowDirection.toLeft ? 1 : -1);
         onClick(arrowDirection);
       }}
     />

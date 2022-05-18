@@ -11,17 +11,13 @@ export const HamburgerIcon = () => {
   ) as TUserContext;
 
   return (
-    <>
-      <button
-        className={`${classes.hamburgericon} ${
-          contextMenuState && classes.open
-        }`}
-        onClick={() => openContextMenu(!contextMenuState)}
-      >
-        <span className={classes.first} />
-        <span className={classes.second} />
-        <span className={classes.third} />
-      </button>
-    </>
+    <button
+      className={`${classes.hamburgericon} ${contextMenuState && classes.open}`}
+      onClick={() => openContextMenu(!contextMenuState)}
+    >
+      <span className={classes.first} />
+      <span className={classes.second} />
+      <span className={classes.third} />
+    </button>
   );
 };
